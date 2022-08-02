@@ -3,20 +3,15 @@ import java.util.Map;
 
 public class AdminData
 {
-	private static final String[] id = {"Á¶", "ÃÖ", "Á¤", "¹İ"};
+	private static final String[] id = {"ì¡°", "ìµœ", "ì •", "ë°˜"};
 	private static final String[] pw = {"1", "2", "3", "4"};
 
 	public static void main(String[] args)
 	{
-		// ¹è¿­(id, pw)¿¡ ´ã°ÜÀÖ´Â µ¥ÀÌÅÍ¸¦ ¿ä¼Ò·Î ´ã¾Æ³»±â
+		// ë°°ì—´(id, pw)ì— ë‹´ê²¨ìˆëŠ” ë°ì´í„°ë¥¼ ìš”ì†Œë¡œ ë‹´ì•„ë‚´ê¸°
 		for (int i=0; i<id.length; i++)
 		{
 			AdminList.account.put(id[i], pw[i]);
-		}
-		// ¹è¿­¿¡ ÀÖ´Â µ¥ÀÌÅÍ Ãâ·Â
-		for (int j=0; j<id.length; j++)
-		{
-			System.out.println(id[j] + "," + AdminList.account.get(id[j]));
 		}
 	}
 }
