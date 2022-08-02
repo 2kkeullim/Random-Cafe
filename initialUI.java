@@ -5,7 +5,6 @@ import java.io.NumberFormatException;
 
 public class InitialUI
 {
-	
 	public static final int takeOut = 1;
 	public static final int forHere = 2;
 	public static final int stampUse = 3;
@@ -40,7 +39,6 @@ public class InitialUI
 				System.out.println("다시 입력해주세요.");
 		}
 		while (true);
-
 	}
 	
 	// 메뉴 선택 후 실행 메소드
@@ -78,10 +76,8 @@ public class InitialUI
 		System.out.println("관리자 화면");
 	}
 
-
 	public static void main(String[] args) throws IOException, NumberFormatException
 	{
-		
 		do
 		{
 			menuDisp();
