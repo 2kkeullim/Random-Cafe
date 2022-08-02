@@ -1,6 +1,9 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.NumberFormatException;
 
-public class initialUI
+public class InitialUI
 {
 	
 	public static final int takeOut = 1;
@@ -9,66 +12,71 @@ public class initialUI
 	public static final int adminLogin = 4;
 	public static int sel = 1;
 	
-	//¸Þ´ºÇ¥½Ã ¸Þ¼­µå
+	// ë©”ë‰´í‘œì‹œ ë©”ì„œë“œ
 	public static void menuDisp()
 	{
-		System.out.println("1. ¸ÅÀåÀÌ¿ë");
-		System.out.println("2. Æ÷Àå");
-		System.out.println("3. ÄíÆù »ç¿ë");
-		System.out.println("4. °ü¸®ÀÚ¸ðµå");
+		System.out.println("1. ë§¤ìž¥ì´ìš©");
+		System.out.println("2. í¬ìž¥");
+		System.out.println("3. ì¿ í° ì‚¬ìš©");
+		System.out.println("4. ê´€ë¦¬ìžëª¨ë“œ");
 	}
 	
-	//¸Þ´º ¼±ÅÃ ¸Þ¼­µå
+	// ë©”ë‰´ ì„ íƒ ë©”ì„œë“œ
 	public static void menuSelect() throws IOException, NumberFormatException
 	{
-		//¸Þ´º ¼±ÅÃ ÀÔ·Â¹Þ±â À§ÇÑ BufferedReader ÀÎ½ºÅÏ½º »ý¼º
+		//ë©”ë‰´ ì„ íƒ ìž…ë ¥ë°›ê¸° ìœ„í•œ BufferedReader ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		// ¸Þ´º¼±ÅÃ
+		// ë©”ë‰´ì„ íƒ
 		do
 		{
-			System.out.print(">> ¼±ÅÃ(1~4) : ");
+			System.out.print(">> ì„ íƒ(1~4) : ");
 			sel = Integer.parseInt(br.readLine());
 			
-			//1~4¹ø ÀÌ¿ÜÀÇ ¹øÈ£ ÀÔ·Â½Ã ´Ù½Ã ÀÔ·ÂÇØ´Þ¶ó´Â ¸Þ¼¼Áö Ãâ·Â
+			//1~4ë²ˆ ì´ì™¸ì˜ ë²ˆí˜¸ ìž…ë ¥ì‹œ ë‹¤ì‹œ ìž…ë ¥í•´ë‹¬ë¼ëŠ” ë©”ì„¸ì§€ ì¶œë ¥
 			if (sel >= 1 && sel <= 4)
 				break;
 			else
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 		}
 		while (true);
 
 
 	}
 	
-	// ¸Þ´º ¼±ÅÃ ÈÄ ½ÇÇà ¸Þ¼­µå
+	// ë©”ë‰´ ì„ íƒ í›„ ì‹¤í–‰ ë©”ì„œë“œ
 	public static void menuRun()
 	{
 		switch (sel)
 		{
+			// ìŒë£Œ ì£¼ë¬¸
 			case 1:
 			case 2: drink(); break;
+			
+			// ì¿ í° ì‚¬ìš©
 			case 3: stamp(); break;
+			
+			// ê´€ë¦¬ìž ëª¨ë“œ
 			case 4: adminUI(); break;
 		}
 	}
 	
-	// À½·á ÁÖ¹® ¸Þ¼­µå
+	// ìŒë£Œ ì£¼ë¬¸ ë©”ì„œë“œ
 	public static void drink()
 	{
-		System.out.println("À½·á¸Þ´º È­¸é");
+		System.out.println("ìŒë£Œë©”ë‰´ í™”ë©´");
 	}
 	
-	// ÄíÆù »ç¿ë ¸Þ¼­µå
+	// ì¿ í° ì‚¬ìš© ë©”ì„œë“œ
 	public static void stamp()
 	{
-		System.out.println("ÄíÆù »ç¿ë À½·á¸Þ´º È­¸é");
+		System.out.println("ì¿ í° ì‚¬ìš© ìŒë£Œë©”ë‰´ í™”ë©´");
 	}
 	
-	// °ü¸®ÀÚ ¸ðµå ÁøÀÔ ¸Þ¼­µå
+	// ê´€ë¦¬ìž ëª¨ë“œ ì§„ìž… ë©”ì„œë“œ
 	public static void adminUI()
 	{
-		System.out.println("°ü¸®ÀÚ È­¸é");
+		System.out.println("ê´€ë¦¬ìž í™”ë©´");
 	}
 
 
