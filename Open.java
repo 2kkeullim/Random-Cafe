@@ -13,10 +13,19 @@ public class Open
 		System.out.println();
 
 		InitialUI init = new InitialUI();
-
-		init.menuDisp();
-		init.menuSelect();
-		init.menuRun();
+		
+		do
+		{
+			init.menuDisp();
+			init.menuSelect();
+			if (init.sel != 4)
+			{
+				System.out.println("\n4번을 눌러서 관리자 모드로 들어가주세요!\n");
+				continue;
+			}
+			init.menuRun();
+		}
+		while (init.sel != 4);
 	}
 
 	public static void main(String[] args) throws IOException
