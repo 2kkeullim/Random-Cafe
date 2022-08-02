@@ -12,11 +12,11 @@ public class InitialUI
 	
 	public static void menuDisp()
 	{
-		System.out.println("1. ¸ÅÀåÀÌ¿ë");
-		System.out.println("2. Æ÷Àå");
-		System.out.println("3. ÄíÆù »ç¿ë");
-		System.out.println("4. °ü¸®ÀÚ¸ğµå");
-		System.out.print(">> ¼±ÅÃ(1~4) : ");
+		System.out.println("1. ë§¤ì¥ì´ìš©");
+		System.out.println("2. í¬ì¥");
+		System.out.println("3. ì¿ í° ì‚¬ìš©");
+		System.out.println("4. ê´€ë¦¬ìëª¨ë“œ");
+		System.out.print(">> ì„ íƒ(1~4) : ");
 	}
 	
 	public static void menuSelect() throws IOException, NumberFormatException
@@ -31,7 +31,7 @@ public class InitialUI
 				break;
 			else
 			{
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("\në‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.\n");
 				menuDisp();
 			}
 		}
@@ -40,30 +40,31 @@ public class InitialUI
 	
 	public static void menuRun()
 	{
+		
 		switch (sel)
 		{
-			case 1:
-			case 2: drink(); break;			
-			case 3: stamp(); break;
-			case 4: adminUI(); break;
+			case takeOut:
+			case forHere: drink(); break;			
+			case stampUse: stamp(); break;
+			case adminLogin: adminUI(); break;
 		}
 	}
 	
 	public static void drink()
 	{
-		System.out.println("À½·á¸Ş´º È­¸é");
+		System.out.println("\nìŒë£Œë©”ë‰´ í™”ë©´\n");
 	}
 	
 	public static void stamp()
 	{
-		System.out.println("ÄíÆù »ç¿ë À½·á¸Ş´º È­¸é");
+		System.out.println("\nì¿ í° ì‚¬ìš© ìŒë£Œë©”ë‰´ í™”ë©´\n");
 	}
 	
 	public static void adminUI()
 	{
-		System.out.println("°ü¸®ÀÚ È­¸é");
+		System.out.println("\nê´€ë¦¬ì í™”ë©´\n");
 	}
-
+	
 	public static void main(String[] args) throws IOException, NumberFormatException
 	{
 		do
