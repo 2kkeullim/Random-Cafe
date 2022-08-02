@@ -5,11 +5,11 @@ public class Open
 
 	public static void openProcess() throws IOException
 	{
-		System.out.println("¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤");
-		System.out.println("¦¢   Random Cafe ¿ÀÇÂ ÁØºñ¸¦ ½ÃÀÛÇÕ´Ï´Ù!!   ¦¢");
-		System.out.println("¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥");
+		System.out.println("â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”");
+		System.out.println("â”‚   Random Cafe ì˜¤í”ˆ ì¤€ë¹„ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤!!   â”‚");
+		System.out.println("â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
 		System.out.println();
-		System.out.println(">> °ü¸®ÀÚ¸ğµå·Î ·Î±×ÀÎ ÈÄ ÀÜµ·À» ³Ö¾îÁÖ¼¼¿ä~!!!");
+		System.out.println(">> ê´€ë¦¬ìëª¨ë“œë¡œ ë¡œê·¸ì¸ í›„ ì”ëˆì„ ë„£ì–´ì£¼ì„¸ìš”~!!!");
 		System.out.println();
 
 		InitialUI init = new InitialUI();
@@ -18,14 +18,14 @@ public class Open
 		{
 			init.menuDisp();
 			init.menuSelect();
-			if (init.sel != 4)
+			if (init.sel != adminLogin)
 			{
-				System.out.println("\n4¹øÀ» ´­·¯¼­ °ü¸®ÀÚ ¸ğµå·Î µé¾î°¡ÁÖ¼¼¿ä!\n");
+				System.out.println("\n4ë²ˆì„ ëˆŒëŸ¬ì„œ ê´€ë¦¬ì ëª¨ë“œë¡œ ë“¤ì–´ê°€ì£¼ì„¸ìš”!\n");
 				continue;
 			}
 			init.menuRun();
 		}
-		while (init.sel != 4);
+		while (init.sel != adminLogin);
 	}
 
 	public static void main(String[] args) throws IOException
