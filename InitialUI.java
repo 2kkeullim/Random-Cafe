@@ -27,7 +27,7 @@ public class InitialUI
 		{
 			sel = Integer.parseInt(br.readLine());
 
-			if (sel >= 1 && sel <= 4)
+			if (sel >= takeOut && sel <= adminLogin)
 				break;
 			else
 			{
