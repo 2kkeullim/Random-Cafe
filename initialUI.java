@@ -24,7 +24,7 @@ public class InitialUI
 	// 메뉴 선택 메서드
 	public static void menuSelect() throws IOException, NumberFormatException
 	{
-		//메뉴 선택 입력받기 위한 BufferedReader 인스턴스 생성
+		// 메뉴 선택 입력받기 위한 BufferedReader 인스턴스 생성
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		// 메뉴선택
@@ -33,14 +33,13 @@ public class InitialUI
 			System.out.print(">> 선택(1~4) : ");
 			sel = Integer.parseInt(br.readLine());
 			
-			//1~4번 이외의 번호 입력시 다시 입력해달라는 메세지 출력
+			// 1~4번 이외의 번호 입력시 다시 입력해달라는 메세지 출력
 			if (sel >= 1 && sel <= 4)
 				break;
 			else
 				System.out.println("다시 입력해주세요.");
 		}
 		while (true);
-
 
 	}
 	
