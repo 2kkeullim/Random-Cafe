@@ -31,7 +31,7 @@ public class InitialUI
 				break;
 			else
 			{
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\n다시 입력해주세요.\n");
 				menuDisp();
 			}
 		}
@@ -40,6 +40,7 @@ public class InitialUI
 	
 	public static void menuRun()
 	{
+		
 		switch (sel)
 		{
 			case 1:
@@ -51,19 +52,19 @@ public class InitialUI
 	
 	public static void drink()
 	{
-		System.out.println("음료메뉴 화면");
+		System.out.println("\n음료메뉴 화면\n");
 	}
 	
 	public static void stamp()
 	{
-		System.out.println("쿠폰 사용 음료메뉴 화면");
+		System.out.println("\n쿠폰 사용 음료메뉴 화면\n");
 	}
 	
 	public static void adminUI()
 	{
-		System.out.println("관리자 화면");
+		System.out.println("\n관리자 화면\n");
 	}
-
+	
 	public static void main(String[] args) throws IOException, NumberFormatException
 	{
 		do
