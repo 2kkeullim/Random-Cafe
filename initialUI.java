@@ -72,7 +72,7 @@ public class InitialUI
 		System.out.println("쿠폰 사용 음료메뉴 화면");
 	}
 	
-	// 관리자 모드 진입 메드
+	// 관리자 모드 진입 메소드
 	public static void adminUI()
 	{
 		System.out.println("관리자 화면");
