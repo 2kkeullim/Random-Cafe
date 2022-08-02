@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -6,29 +5,28 @@ import java.lang.Exception;
 
 public class AdminUI
 {	
-	
 	static int sel;
 	static BufferedReader br ;
 	
-	static  // ÃÊ±âÈ­
+	static  // ì´ˆê¸°í™”
 	{
 		br = new BufferedReader(new InputStreamReader(System.in));    
 		sel = 1;
 	}
 
-	public static void menuDisp()                                                  // ¸Ş´º Ãâ·Â ¸Ş¼Òµå
+	public static void menuDisp()                                                  // ë©”ë‰´ ì¶œë ¥ ë©”ì†Œë“œ
 	{
 		System.out.println();
-		System.out.println("1.¸ÅÃâ¾× °ü¸®");
-		System.out.println("2.¸Ş´ºº° ÆÇ¸ÅºñÀ²");
-		System.out.println("3.ÀÜµ· º¸À¯·®");
-		System.out.println("4.ÀÜµ· Ãß°¡");
-		System.out.println("5.Á¾·á");
+		System.out.println("1.ë§¤ì¶œì•¡ ê´€ë¦¬");
+		System.out.println("2.ë©”ë‰´ë³„ íŒë§¤ë¹„ìœ¨");
+		System.out.println("3.ì”ëˆ ë³´ìœ ëŸ‰");
+		System.out.println("4.ì”ëˆ ì¶”ê°€");
+		System.out.println("5.ì¢…ë£Œ");
 		System.out.println("====================");
-		System.out.print(">>¸Ş´º ¼±ÅÃ (1~5) : ");
+		System.out.print(">>ë©”ë‰´ ì„ íƒ (1~5) : ");
 	}
 
-	public static void menuSelect() throws IOException,NumberFormatException     // ¸Ş´º¼±ÅÃ ¸Ş¼Òµå
+	public static void menuSelect() throws IOException, NumberFormatException     // ë©”ë‰´ì„ íƒ ë©”ì†Œë“œ
 	{
 		do
 		{
@@ -36,14 +34,14 @@ public class AdminUI
 			if (sel < 1 || sel > 5)
 			{
 				System.out.println();
-				System.out.println("ÀÔ·Â°ªÀ» ¹ş¾î³µ½À´Ï´Ù.");
-				menuDisp();														// ÀÔ·Â°ª ¹ş¾î³µÀ»½Ã ¸Ş´º ´Ù½ÃÃâ·Â
+				System.out.println("ì…ë ¥ê°’ì„ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤.");
+				menuDisp();								// ì…ë ¥ê°’ ë²—ì–´ë‚¬ì„ì‹œ ë©”ë‰´ ë‹¤ì‹œì¶œë ¥
 			}
 		}
 		while (sel < 1 || sel > 5);
 	}
 
-	public static void menuRun()												// ¼±ÅÃÇÑ ¸Ş´º½ÇÇà¿¡ µû¸¥ ±â´ÉÈ£Ãâ ¸Ş¼Òµå
+	public static void menuRun()									// ì„ íƒí•œ ë©”ë‰´ì‹¤í–‰ì— ë”°ë¥¸ ê¸°ëŠ¥í˜¸ì¶œ ë©”ì†Œë“œ
 	{
 		switch(sel)
 		{
@@ -55,33 +53,33 @@ public class AdminUI
 		}
 	}
 
-	public static void sales()  // ¸ÅÃâ¾× °ü¸® ¸Ş¼Òµå
+	public static void sales()  // ë§¤ì¶œì•¡ ê´€ë¦¬ ë©”ì†Œë“œ
 	{
 		System.out.println("sales");
 	}
 
-	public static void salesRatio()  // ¸Ş´ºº° ÆÇ¸Å ºñÀ² ¸Ş¼Òµå
+	public static void salesRatio()  // ë©”ë‰´ë³„ íŒë§¤ ë¹„ìœ¨ ë©”ì†Œë“œ
 	{ 
 		System.out.println("salesRatio");
 	}
 
-	public static void changes()    // ÀÜµ· º¸À¯·®È®ÀÎ ¸Ş¼Òµå
+	public static void changes()    // ì”ëˆ ë³´ìœ ëŸ‰í™•ì¸ ë©”ì†Œë“œ
 	{
 		System.out.println("changes");
 	}
 
-	public static void addChanges()   // ÀÜµ· Ãß°¡ ¸Ş¼Òµå
+	public static void addChanges()   // ì”ëˆ ì¶”ê°€ ë©”ì†Œë“œ
 	{
 		System.out.println("addchanges");
 	}
 
-	public static void exit()     // ÇÁ·Î±×·¥Á¾·á ¸Ş¼Òµå
+	public static void exit()     // í”„ë¡œê·¸ë¨ì¢…ë£Œ ë©”ì†Œë“œ
 	{
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á!!!");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ!!!");
 		System.exit(0);
 	}
 
-	public static void main(String[] args) throws IOException,NumberFormatException
+	public static void main(String[] args) throws IOException, NumberFormatException
 	{
 		do
 		{
@@ -89,8 +87,6 @@ public class AdminUI
 			menuSelect();
 			menuRun();
 		}
-		while(true);
-		
+		while(true);	
 	}
-
 }
