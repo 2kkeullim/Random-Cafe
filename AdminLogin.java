@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class AdminLogin
 {
-	public void login() throws IOException
+	public static void login() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String id, pw;
@@ -32,14 +32,11 @@ public class AdminLogin
 			AdminUI.menuSelect();
 			AdminUI.menuRun();
 		}
-		while(true);			
+		while (true);			
 	}
 
 	public static void main(String[] args) throws IOException
 	{
-		AdminData ad = new AdminData();                      //AdminList에 AdminData 대입.
-		ad.listIn();
-		AdminLogin al = new AdminLogin();                    //AdminL
-		al.login();
+		login();
 	}
 }
