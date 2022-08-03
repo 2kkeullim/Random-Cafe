@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class MenuUI
+public class DrinkUI
 {
 	public static int sel = 1;
 
@@ -13,7 +13,7 @@ public class MenuUI
 	static String[] tea = {"1. 그린티","2. 얼그레이티","3. 페퍼민트","4. 복숭아티","5. 캐모마일","6. 랜덤티"};
 	static String[] ade = {"1. 레몬에이드","2. 유자에이드","3. 망고에이드","4. 자몽에이드","5. 청포도에이드","6. 랜덤에이드"};
 	
-	public static void menuUISelect() throws IOException
+	public static void drinkUISelect() throws IOException
 	{
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.print("카테고리 번호 선택 (1~6) : ");
@@ -70,7 +70,7 @@ public class MenuUI
 
 	public static void main(String[] args) throws IOException
 	{
-		menuUISelect();
+		drinkUISelect();
 	}
 
 }
