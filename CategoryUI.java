@@ -2,11 +2,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class MainUI
+public class CategoryUI
 {
 	public static int sel = 1;
 
-	public static void categories()
+	public static void category()
 	{
 		System.out.println("1. coffee");
 		System.out.println("2. non-coffee");
@@ -18,7 +18,7 @@ public class MainUI
 		System.out.print("메뉴를 선택하세요(1 ~ 6)");
 	}
 
-	public static void ctgSelect() throws IOException
+	public static void categorySelect() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -31,13 +31,13 @@ public class MainUI
 			else
 			{
 				System.out.println("다시 입력하세요");
-				categories();
+				category();
 			}
 		}
 		while (true);
 	}
 
-	public static void ctgRun()
+	public static void categoryRun()
 	{
 		switch (sel)
 		{
@@ -84,9 +84,9 @@ public class MainUI
 	{
 		do
 		{
-			categories();
-			ctgSelect();
-			ctgRun();
+			category();
+			categorySelect();
+			categoryRun();
 		}
 		while (true);
 
