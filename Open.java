@@ -18,14 +18,14 @@ public class Open
 		{
 			init.menuDisp();
 			init.menuSelect();
-			if (init.sel != adminLogin)
+			if (init.sel != init.adminLogin)
 			{
 				System.out.println("\n4번을 눌러서 관리자 모드로 들어가주세요!\n");
 				continue;
 			}
 			init.menuRun();
 		}
-		while (init.sel != adminLogin);
+		while (init.sel != init.adminLogin);
 	}
 
 	public static void main(String[] args) throws IOException
