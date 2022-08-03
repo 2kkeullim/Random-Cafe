@@ -4,6 +4,17 @@ public class Member
 	private int stamp = 0;
 	private int coupon = 0;
 
+	Member()		// default 생성자
+	{
+	}
+
+	Member(String phoneNumber)
+	{
+		this.phoneNumber = phoneNumber;
+		stamp = 0;
+		coupon = 0;
+	}
+
 	public String getPhoneNumber()
 	{
 		return phoneNumber;
