@@ -38,7 +38,7 @@ public class InitialUI
 		while (true);
 	}
 	
-	public static void menuRun()
+	public static void menuRun() throws IOException
 	{
 		
 		switch (sel)
@@ -60,9 +60,11 @@ public class InitialUI
 		System.out.println("\n쿠폰 사용 음료메뉴 화면\n");
 	}
 	
-	public static void adminUI()
+	public static void adminUI() throws IOException
 	{
-		System.out.println("\n관리자 화면\n");
+		System.out.println("=================");
+		System.out.println("관리자 로그인");
+		AdminLogin.login();
 	}
 	
 	public static void main(String[] args) throws IOException, NumberFormatException
