@@ -29,18 +29,7 @@ public class AdminLogin
 				System.out.println("비밀 번호가 올바르지 않습니다.");
 		}
 		while (!AdminList.account.get(id).equals(pw));
-		
-		do
-		{
-			AdminUI.menuDisp();
-			AdminUI.menuSelect();
-			AdminUI.menuRun();
-		}
-		while (true);			
-	}
 
-	public static void main(String[] args) throws IOException
-	{
-		login();
+		System.out.println("관리자 로그인에 성공했습니다!\n");
 	}
 }
