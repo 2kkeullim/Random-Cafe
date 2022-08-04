@@ -25,11 +25,23 @@ public class Open
 		}
 		while (InitialUI.sel != InitialUI.adminLogin);
 
-		System.out.println("오픈 준비가 완료되었습니다~!!!");
+		System.out.println("오픈 준비가 완료되었습니다!!!!!!");
+	}
+
+	public static void operate() throws IOException
+	{
+		do
+		{
+			InitialUI.menuDisp();
+			InitialUI.menuSelect();
+			InitialUI.menuRun();
+		}
+		while (true);
 	}
 
 	public static void main(String[] args) throws IOException
 	{
 		openProcess();
+		operate();
 	}
 }

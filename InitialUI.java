@@ -16,7 +16,7 @@ public class InitialUI
 		System.out.println("2. 포장");
 		System.out.println("3. 쿠폰 사용");
 		System.out.println("4. 관리자모드");
-		System.out.print(">> 선택(1~4) : ");
+		System.out.print(">> 선택(1 ~ 4) : ");
 	}
 	
 	public static void menuSelect() throws IOException, NumberFormatException
@@ -40,16 +40,14 @@ public class InitialUI
 	
 	public static void menuRun() throws IOException
 	{
-		
 		switch (sel)
 		{
 			case takeOut:
 			case forHere: MenuUI.menuRun(); break;	
 			case stampUse: stamp(); break;
-			case adminLogin: AdminLogin.login(); break;
+			case adminLogin: AdminOpen.adminOpen(); break;
 		}
 	}
-	
 	
 	public static void stamp()
 	{
