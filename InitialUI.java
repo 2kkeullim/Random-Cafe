@@ -44,28 +44,18 @@ public class InitialUI
 		switch (sel)
 		{
 			case takeOut:
-			case forHere: drink(); break;			
+			case forHere: MenuUI.menuRun(); break;	
 			case stampUse: stamp(); break;
-			case adminLogin: adminUI(); break;
+			case adminLogin: AdminLogin.login(); break;
 		}
 	}
 	
-	public static void drink()
-	{
-		System.out.println("\n음료메뉴 화면\n");
-	}
 	
 	public static void stamp()
 	{
 		System.out.println("\n쿠폰 사용 음료메뉴 화면\n");
 	}
-	
-	public static void adminUI() throws IOException
-	{
-		System.out.println("=================");
-		System.out.println("관리자 로그인");
-		AdminLogin.login();
-	}
+
 	
 	public static void main(String[] args) throws IOException, NumberFormatException
 	{
