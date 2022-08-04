@@ -18,52 +18,21 @@ public class CategoryUI
 		System.out.print("메뉴를 선택하세요(1 ~ 6) : ");
 	}
 
-	public static void categorySelect() throws IOException
+	public static void categoryRun() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		do
 		{
+			sel = Integer.parseInt(br.readLine());
 
-
-			if (MenuUI.sel >= 1 && MenuUI.sel <= 6)
-			{
-				category();
-				sel = Integer.parseInt(br.readLine());
-				categoryRun();
-				break;
-			}
+			if (sel >= 1 && sel <= 6)
+				DrinkUI.drinkRun();
 			else
-			{
-				System.out.println("다시 입력하세요");
-				category();
-			}
+				System.out.println("\n다시 입력하세요\n");
+
+			category();
 		}
 		while (true);
-	}
-
-	public static void categoryRun()
-	{
-		switch (sel)
-		{
-		case 1: 
-		case 2: 
-		case 3: 
-		case 4: 
-		case 5: 
-		case 6: DrinkUI.drinkUISelect(); break;
-		}
-	}
-
-	public static void main(String[] args) throws IOException
-	{
-		//do
-		//{
-			category();
-			categorySelect();
-			categoryRun();
-		//}
-		//while (true);
-
 	}
 }
