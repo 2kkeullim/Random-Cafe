@@ -15,7 +15,7 @@ public class CategoryUI
 		System.out.println("5. tea");
 		System.out.println("6. ade");
 		System.out.println("-------------");
-		System.out.print("메뉴를 선택하세요(1 ~ 6)");
+		System.out.print("메뉴를 선택하세요(1 ~ 6) : ");
 	}
 
 	public static void categorySelect() throws IOException
@@ -24,10 +24,15 @@ public class CategoryUI
 
 		do
 		{
-			sel = Integer.parseInt(br.readLine());
 
-			if (sel >=1 && sel <=6)
+
+			if (MenuUI.sel >= 1 && MenuUI.sel <= 6)
+			{
+				category();
+				sel = Integer.parseInt(br.readLine());
+				categoryRun();
 				break;
+			}
 			else
 			{
 				System.out.println("다시 입력하세요");
@@ -41,54 +46,24 @@ public class CategoryUI
 	{
 		switch (sel)
 		{
-		case 1: coffee(); break;
-		case 2: nonCoffee(); break;
-		case 3: juice(); break;
-		case 4: smoothie(); break;
-		case 5: tea(); break;
-		case 6: ade(); break;
+		case 1: 
+		case 2: 
+		case 3: 
+		case 4: 
+		case 5: 
+		case 6: DrinkUI.drinkUISelect(); break;
 		}
-	}
-
-	public static void coffee()
-	{
-		System.out.println("1. 커피 입니다");
-	}
-
-	public static void nonCoffee()
-	{
-		System.out.println("2. 논커피 입니다");
-	}
-
-	public static void juice()
-	{
-		System.out.println("3. 주스 입니다");
-	}
-
-	public static void smoothie()
-	{
-		System.out.println("4. 스무디 입니다");
-	}
-
-	public static void tea()
-	{
-		System.out.println("5. 티 입니다");
-	}
-
-	public static void ade()
-	{
-		System.out.println("6. 에이드 입니다");
 	}
 
 	public static void main(String[] args) throws IOException
 	{
-		do
-		{
+		//do
+		//{
 			category();
 			categorySelect();
 			categoryRun();
-		}
-		while (true);
+		//}
+		//while (true);
 
 	}
 }
