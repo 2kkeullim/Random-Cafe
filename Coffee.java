@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -37,13 +38,28 @@ public class Coffee
 					case 2: ice = "얼음 보통" ; break;
 					case 3: ice = "얼음 많이" ; break;
 				}
+
+				cupsCount();
 			}
 			else if(temp.equals("h") || temp.equals("H"))
 			{
 				hotOrCold = "hot";
 				ice = " ";
+
+				cupsCount();
 			}
-			do
+			else
+			{
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요 (h(H) 또는 c(C)) ");
+			}
+		}
+		while (!((temp.equals("c") || temp.equals("C") || temp.equals("h") || temp.equals("H"))));
+	}
+
+	public void cupsCount() throws IOException
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		do
 			{
 				System.out.print("선택하신 음료의 개수를 선택하세요(최대 주문 갯수 : 30). : ");
 				drinkCount = Integer.parseInt(br.readLine());
@@ -51,7 +67,6 @@ public class Coffee
 					System.out.println("음료의 개수를 다시 입력해주세요.");
 			}
 			while (drinkCount < 1 || drinkCount > 30);
-		}
-		while (!((temp.equals("c") || temp.equals("C") || temp.equals("h") || temp.equals("H"))));
 	}
+
 }
