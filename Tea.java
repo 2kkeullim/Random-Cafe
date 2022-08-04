@@ -1,9 +1,8 @@
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Coffee
+public class Tea
 {
 	public static final int cost = 1000;
 	public String hotOrCold; 
@@ -60,13 +59,13 @@ public class Coffee
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		do
-			{
-				System.out.print("선택하신 음료의 개수를 선택하세요(최대 주문 갯수 : 30) : ");
-				drinkCount = Integer.parseInt(br.readLine());
-				if(drinkCount < 1 || drinkCount > 30)
-					System.out.println("음료의 개수를 다시 입력해주세요.");
-			}
-			while (drinkCount < 1 || drinkCount > 30);
+		{
+			System.out.print("선택하신 음료의 개수를 선택하세요(최대 주문 갯수 : 30) : ");
+			drinkCount = Integer.parseInt(br.readLine());
+			if(drinkCount < 1 || drinkCount > 30)
+				System.out.println("음료의 개수를 다시 입력해주세요.");
+		}
+		while (drinkCount < 1 || drinkCount > 30);
 	}
 
 }

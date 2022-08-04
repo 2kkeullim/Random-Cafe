@@ -1,11 +1,10 @@
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Coffee
+public class NonCoffee
 {
-	public static final int cost = 1000;
+	public static final int cost = 2000;
 	public String hotOrCold; 
 	public String ice; 
 	public int drinkCount;     //음료 선택 갯수
