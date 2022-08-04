@@ -60,7 +60,7 @@ public class NonCoffee
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		do
 			{
-				System.out.print("선택하신 음료의 개수를 선택하세요(최대 주문 갯수 : 30). : ");
+				System.out.print("선택하신 음료의 개수를 선택하세요(최대 주문 갯수 : 30) : ");
 				drinkCount = Integer.parseInt(br.readLine());
 				if(drinkCount < 1 || drinkCount > 30)
 					System.out.println("음료의 개수를 다시 입력해주세요.");
