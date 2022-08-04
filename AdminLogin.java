@@ -8,6 +8,10 @@ public class AdminLogin
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String id, pw;
+	
+		System.out.println("=================");
+		System.out.println("관리자 로그인");
+
 		do
 		{
 			System.out.print("ID 입력 : ");
