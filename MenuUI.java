@@ -9,12 +9,17 @@ public class MenuUI
 
    public static void menuRun() throws IOException
    {
+		if (InitialUI.sel == 1)
+		{	System.out.println();
+			System.out.println("매장이용을 선택하셨습니다. ");
+		}
+		else if (InitialUI.sel == 2)
+		{
+			System.out.println();
+			System.out.println("포장을 선택하셨습니다. ");
+		}
 		CategoryUI.category();
 		CategoryUI.categoryRun();
    }
 
-   public static void main(String[] args) throws IOException
-	{
-		menuRun();
-	}
 }
