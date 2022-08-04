@@ -11,21 +11,21 @@ public class Open
 		System.out.println();
 		System.out.println(">> 관리자모드로 로그인 후 잔돈을 넣어주세요~!!!");
 		System.out.println();
-
-		InitialUI init = new InitialUI();
 		
 		do
 		{
-			init.menuDisp();
-			init.menuSelect();
-			if (init.sel != init.adminLogin)
+			InitialUI.menuDisp();
+			InitialUI.menuSelect();
+			if (InitialUI.sel != InitialUI.adminLogin)
 			{
 				System.out.println("\n4번을 눌러서 관리자 모드로 들어가주세요!\n");
 				continue;
 			}
-			init.menuRun();
+			InitialUI.menuRun();
 		}
-		while (init.sel != init.adminLogin);
+		while (InitialUI.sel != InitialUI.adminLogin);
+
+		System.out.println("오픈 준비가 완료되었습니다~!!!");
 	}
 
 	public static void main(String[] args) throws IOException
