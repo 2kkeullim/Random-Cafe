@@ -88,6 +88,7 @@ public class ReturnChange
 
 	public static void changePrint() throws IOException	//잔돈 반환 결과 출력
 	{
+		changeCal();
 		returnChangeSum = returnChange10000+returnChange5000+returnChange1000+returnChange500;
 		if (change == 0)
 		{
@@ -123,6 +124,7 @@ public class ReturnChange
 			while (true);
 
 		}
+		changeReNew();
 
 	}
 	
