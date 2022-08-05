@@ -134,6 +134,11 @@ public class ReturnChange
 		Change.change.put(500,Change.change.get(500)-count500);
 	}
 
+	public static int getChangeSum()
+	{
+		return returnChangeSum;
+	}
+
 	public static void main(String[] args) throws IOException
 	{
 		changeCal();
