@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class AdminUI
 {	
 	static int sel;
-	static BufferedReader br ;
+	static BufferedReader br;
 	
 	static  // 초기화
 	{
@@ -16,14 +16,17 @@ public class AdminUI
 
 	public static void menuDisp()                                                  // 메뉴 출력 메소드
 	{
-		System.out.println("1.매출액 관리");
-		System.out.println("2.메뉴별 판매비율");
-		System.out.println("3.잔돈 보유량");
-		System.out.println("4.잔돈 추가");
-		System.out.println("5.카페 마감");
-		System.out.println("6.뒤로 가기");
-		System.out.println("====================");
-		System.out.print(">> 메뉴 선택 (1 ~ 6) : ");
+		System.out.println("┌───────────────────────┐");
+		System.out.printf("│  [환영합니다, %s 님]  │\n", AdminLogin.getId());
+		System.out.println("│                       │");
+		System.out.println("│  1. 매출액 관리       │");
+		System.out.println("│  2. 메뉴별 판매비율   │");
+		System.out.println("│  3. 잔돈   보유량     │");
+		System.out.println("│  4. 잔돈   추가       │");
+		System.out.println("│  5. 카페   마감       │");
+		System.out.println("│  6. 뒤로   가기       │");
+		System.out.println("└───────────────────────┘");
+		System.out.print("\n>> 메뉴 선택 (1 ~ 6) : ");
 	}
 
 	public static void menuSelect() throws IOException, NumberFormatException     // 메뉴선택 메소드
