@@ -4,9 +4,9 @@ public class Cat
 	{
 		System.out.println();
 		System.out.println("           A____A     A____A     A____A                ");
-		System.out.println("          | ·ㅅ· |   | ·ㅅ· |   | ·ㅅ· |               ");
+		System.out.println("          |·ㅅ·|   |·ㅅ·|   |·ㅅ·|               ");
 		System.out.println("          |      |   |　　  |   |      |               ");
-		System.out.println("          | u　u |   | d　u |   | u　u |               ");
+		System.out.println("          | u　u |   | b　d |   | u　u |               ");
 		System.out.println("          |      |   |      |   |      |               ");
 		System.out.println("          |      |   |      |   |      |               ");
 		System.out.println("          |      |   |      |   |      |               ");
@@ -19,7 +19,7 @@ public class Cat
 	{
 		System.out.println();
 		System.out.println("           A____A     A____A     A____A                ");
-		System.out.println("          | · ·  |   | · ·  |   | · ·  |               ");
+		System.out.println("          | · ·|   | · ·|   | · ·|               ");
 		System.out.println("          |  ^   |   |  ^   |   |  ^   |               ");
 		System.out.println("          | u　u |   | u　u |   | u　u |               ");
 		System.out.println("          |      |   |      |   |      |               ");
