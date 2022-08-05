@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class ReturnChange
 {
 	static int pay = 10000;
@@ -84,7 +86,7 @@ public class ReturnChange
 		}
 	}
 
-	public static void changePrint()	//잔돈 반환 결과 출력
+	public static void changePrint() throws IOException	//잔돈 반환 결과 출력
 	{
 		returnChangeSum = returnChange10000+returnChange5000+returnChange1000+returnChange500;
 		if (change == 0)
@@ -110,7 +112,18 @@ public class ReturnChange
 			System.out.println("======================================");
 			System.out.println("잔돈이 부족하니 카운터로 문의해주세요.");
 			System.out.println("======================================");
+			Cart.vc.clear();
+			Cart.totalSum = 0;
+			do
+			{
+				InitialUI.menuDisp();
+				InitialUI.menuSelect();
+				InitialUI.menuRun();
+			}
+			while (true);
+
 		}
+
 	}
 	
 	public static void changeReNew() // 잔돈 보유량 갱신
@@ -121,7 +134,7 @@ public class ReturnChange
 		Change.change.put(500,Change.change.get(500)-count500);
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		changeCal();
 		changePrint();
