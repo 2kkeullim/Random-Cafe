@@ -6,9 +6,12 @@ import java.io.IOException;
 public class Cart
 {
 	public static Vector<Drink> vc = new Vector<Drink>();
-	public static int sel;
+	public static int sel; 
+	public static int totalSum = 0; // 총 금액 변수
+
 	public static void printVC() throws IOException
 	{
+		total();
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		System.out.println();
 		System.out.println("선택한 음료명 ");
@@ -19,12 +22,15 @@ public class Cart
 				, vc.get(i).getPrice() * vc.get(i).getCount() ,vc.get(i).getCount());
 		}
 		System.out.println("------------------------------------");
+		System.out.println("총 금액 : " + totalSum);
 		System.out.print("1. 결제하기   2.항목 삭제하기 3. 뒤로가기");
+
 		sel = Integer.parseInt(br.readLine());
 		switch(sel)
 		{
-			case 1: 
-			case 2: remove(); break;
+			case 1 : 
+			case 2 : remove(); break;
+			case 3 : 
 		}
 	}
 
@@ -48,9 +54,19 @@ public class Cart
 		System.out.print("삭제할 항목의 번호를 입력하세요. : " );
 		int temp = Integer.parseInt(br.readLine());
 		vc.remove(temp-1);
+
+		totalSum -= vc.get(temp-1).getPrice() * vc.get(temp-1).getCount();
 	}
 
-	
+	public static void total()
+	{
+		int temp = 0;
+		for (int i=0; i<vc.size(); i++)
+		{
+			temp += vc.get(i).getPrice() * vc.get(i).getCount();
+		}
+		totalSum = temp; 
+	}
 
 
 }

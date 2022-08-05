@@ -80,6 +80,12 @@ public class Options
 
 	public void cupsCount() throws IOException
 	{
+		if (DrinkUI.sel == 6)
+		{
+			drinkCountOption = 1;
+			return;
+		}
+
 		drinkCountOption = 0;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		do
