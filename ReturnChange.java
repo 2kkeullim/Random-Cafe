@@ -2,9 +2,9 @@ import java.io.IOException;
 
 public class ReturnChange
 {
-	static int pay = 10000;
-	static int drink = 6500;
-	static int change = 9500;
+	static int pay;
+	static int drink;
+	static int change;
 	
 	//손님에게 건네준 잔돈을 담을 변수
 	private static int returnChangeSum = 0;

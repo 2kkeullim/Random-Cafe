@@ -24,8 +24,6 @@ public class Pay
 				case 1: cardInsert(); break;
 				case 2: cashInsert(); break;
 			}
-			
-		
 		}
 		while (sel<1 || sel>2);
 			
@@ -41,7 +39,7 @@ public class Pay
 			if(str==null)
 				cashOrCard();
 		}
-		while (str != null);
+		while (!(str.equals("y") || str.equals("Y")));
 		
 		int temp;
 		do
@@ -71,9 +69,9 @@ public class Pay
 			System.out.print(">> 현금투입 : Y or y, 뒤로 가기 : Ctrl+z : ");
 			str = br.readLine();
 			if(str == null)
-				cashOrCard();;
+				cashOrCard();
 		}
-		while (str != null);
+		while (!(str.equals("y") || str.equals("Y")));
 		
 		
 		int temp;
@@ -88,6 +86,7 @@ public class Pay
 			}
 			ReturnChange.pay   = temp;
 			ReturnChange.drink = Cart.totalSum;  //이게 걱정
+			ReturnChange.change = ReturnChange.pay-ReturnChange.drink ;
 			ReturnChange.changeCal();       //잔돈계산
 			ReturnChange.changePrint();		//잔돈반환결과
 			ReturnChange.changeReNew();		//잔돈보유량 갱신
