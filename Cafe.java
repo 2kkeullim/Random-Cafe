@@ -1,9 +1,9 @@
 import java.io.IOException;
 
-public class Open
+public class Cafe
 {
 
-	public static void openProcess() throws IOException
+	public static void open() throws IOException
 	{
 		System.out.println("┌──────────────────────────────────────────┐");
 		System.out.println("│   Random Cafe 오픈 준비를 시작합니다!!   │");
@@ -25,7 +25,7 @@ public class Open
 		}
 		while (InitialUI.sel != InitialUI.adminLogin);
 
-		System.out.println("오픈 준비가 완료되었습니다!!!!!!");
+		System.out.println("오픈 준비가 완료되었습니다.");
 	}
 
 	public static void operate() throws IOException
@@ -37,11 +37,5 @@ public class Open
 			InitialUI.menuRun();
 		}
 		while (true);
-	}
-
-	public static void main(String[] args) throws IOException
-	{
-		openProcess();
-		operate();
 	}
 }

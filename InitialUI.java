@@ -12,11 +12,15 @@ public class InitialUI
 	
 	public static void menuDisp()
 	{
-		System.out.println("1. 매장이용");
-		System.out.println("2. 포장");
-		System.out.println("3. 쿠폰 사용");
-		System.out.println("4. 관리자모드");
-		System.out.print(">> 선택(1 ~ 4) : ");
+		System.out.println("┌─────────────────┐");
+		System.out.println("│    [Service]    │")
+		System.out.println("│                 │")
+		System.out.println("│  1. 매장  이용  │");
+		System.out.println("│  2. 포      장  │");
+		System.out.println("│  3. 쿠폰  사용  │");
+		System.out.println("│  4. 관리자모드  │");
+		System.out.println("└─────────────────┘");
+		System.out.print("\n>> 선택(1 ~ 4) : ");
 	}
 	
 	public static void menuSelect() throws IOException, NumberFormatException
