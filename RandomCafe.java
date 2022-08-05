@@ -4,7 +4,7 @@ public class RandomCafe
 {
 	public static void main(String[] args) throws IOException
 	{
-		Open.openProcess();
-		Open.operate();
+		Cafe.open();
+		Cafe.operate();
 	}
 }
