@@ -47,9 +47,9 @@ public class CategoryUI
 		while (sel != 7 && sel != 8);
 	}
 
-	public static void cart()
+	public static void cart() throws IOException
 	{
-		System.out.println("cart 입니다");
+		Cart.printVC();
 	}
 
 	
