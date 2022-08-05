@@ -8,7 +8,6 @@ public class RandomDrink
 	{
 		Random rd = new Random();
 		n = rd.nextInt(5);
-
 		return n;
 	}
 }
