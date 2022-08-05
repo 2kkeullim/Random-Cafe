@@ -1,14 +1,14 @@
-public class Member
+public class User
 {
 	private String phoneNumber;
 	private int stamp = 0;
 	private int coupon = 0;
 
-	Member()		// default 생성자
+	User()		// default 생성자
 	{
 	}
 
-	Member(String phoneNumber)
+	User(String phoneNumber)
 	{
 		this.phoneNumber = phoneNumber;
 		stamp = 0;
