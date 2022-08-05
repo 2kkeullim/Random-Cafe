@@ -48,7 +48,7 @@ public class InitialUI
 		{
 			case takeOut:
 			case forHere: MenuUI.menuRun(); break;	
-			case stampUse: stamp(); break;
+			case stampUse: CouponUse.couponRun(); break;
 			case adminLogin: AdminOpen.adminOpen(); break;
 		}
 	}
