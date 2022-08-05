@@ -13,8 +13,8 @@ public class InitialUI
 	public static void menuDisp()
 	{
 		System.out.println("┌─────────────────┐");
-		System.out.println("│    [Service]    │")
-		System.out.println("│                 │")
+		System.out.println("│    [Service]    │");
+		System.out.println("│                 │");
 		System.out.println("│  1. 매장  이용  │");
 		System.out.println("│  2. 포      장  │");
 		System.out.println("│  3. 쿠폰  사용  │");
