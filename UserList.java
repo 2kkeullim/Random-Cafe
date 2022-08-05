@@ -5,12 +5,21 @@ public class UserList extends User
 {
 	static Vector<User> user = new Vector<User>(); // 개인 정보를 담는 그릇
 	static Stamp sp = new Stamp();
+	public static boolean flag;
+	public static String pn;
+	public static int couponForLogIn; 
 
 	public static void userLogin()
 	{
 		Scanner sc = new Scanner(System.in);
+		user.add(new User("김"));
+		user.add(new User("이"));
+		user.add(new User("박"));
+
+		user.get(1).setCoupon(1);
+		user.get(2).setCoupon(2);
 		System.out.print("번호를 입력하세요 : " );
-		String pn = sc.next(); 
+		pn = sc.next(); 
 
 			for (int i = 0; i < user.size(); i++)
 			{
@@ -27,7 +36,11 @@ public class UserList extends User
 						user.get(i).setStamp(user.get(i).getStamp()%10);
 						user.get(i).setCoupon(user.get(i).getCoupon()+1);
 					}
+					flag = true;
+					couponForLogIn = user.get(i).getCoupon();
 					break;
+					
+					
 				}
 				else if(!user.get(i).getPhoneNumber().equals(pn) && i == user.size()-1)
 				{
@@ -47,5 +60,10 @@ public class UserList extends User
 					break;
 				}
 			}
+	}
+
+	public static void userVerify()
+	{
+		
 	}
 }
