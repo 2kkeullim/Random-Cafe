@@ -28,9 +28,10 @@ public class Cart
 		sel = Integer.parseInt(br.readLine());
 		switch(sel)
 		{
-			case 1 : 
+			case 1 : Pay.cashOrCard(); break;
 			case 2 : remove(); break;
-			case 3 : 
+			case 3 : CategoryUI.category(); CategoryUI.categoryRun();break;
+					 
 		}
 	}
 
