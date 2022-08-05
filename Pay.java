@@ -21,78 +21,10 @@ public class Pay
 			}
 			switch(sel)
 			{
-				case 1: cardInsert(); break;
-				case 2: cashInsert(); break;
+				case 1: PayCard.cardInsert(); break;
+				case 2: PayCash.cashInsert(); break;
 			}
 		}
-		while (sel<1 || sel>2);
-			
+		while (sel<1 || sel>2);	
 	}
-	public static void cardInsert() throws IOException
-	{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String str;
-		do
-		{
-			System.out.print(">> 카드투입 : Y or y, 뒤로 가기 : Ctrl+z : ");
-			str = br.readLine();
-			if(str==null)
-				cashOrCard();
-		}
-		while (!(str.equals("y") || str.equals("Y")));
-		
-		int temp;
-		do
-		{
-			System.out.print("결제되었습니다. 스탬프를 적립하시겠습니까? (예 : 1 , 아니오 : 2) : ");
-			temp = Integer.parseInt(br.readLine());
-			if(temp<1 || temp>2)
-			{
-				System.out.println("다시 입력해 주십시오.");
-				continue;
-			}
-			switch(temp)
-			{
-				case 1: UserList.userLogin(); break;
-				case 2: Receipt.receiptDispForCard(); break;
-			}
-		}
-		while (temp<1 || temp>2);
-	}
-
-	public static void cashInsert() throws IOException
-	{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String str;
-		do
-		{
-			System.out.print(">> 현금투입 : Y or y, 뒤로 가기 : Ctrl+z : ");
-			str = br.readLine();
-			if(str == null)
-				cashOrCard();
-		}
-		while (!(str.equals("y") || str.equals("Y")));
-		
-		
-		int temp;
-		do
-		{
-			System.out.print("현금 얼마를 투입하시겠니까? :");
-			temp = Integer.parseInt(br.readLine());
-			if(temp%500 != 0)
-			{
-				System.out.println("다시 입력해 주십시오.");
-				continue;
-			}
-			ReturnChange.pay   = temp;
-			ReturnChange.drink = Cart.totalSum;  //이게 걱정
-			ReturnChange.change = ReturnChange.pay-ReturnChange.drink ;
-			ReturnChange.changeCal();       //잔돈계산
-			ReturnChange.changePrint();		//잔돈반환결과
-			ReturnChange.changeReNew();		//잔돈보유량 갱신
-		}
-		while (temp%500 != 0);
-		
-	}
-
 }
