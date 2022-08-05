@@ -5,8 +5,8 @@ import java.io.IOException;
 public class Ade extends Options
 {
 	public static final int cost = 1500;
-	public static String drinkName[] = {"레몬에이드" , "유자에이드", "망고에이드" , "자몽에이드" ,"청포도에이드"};
-	public static int drinkPrice[] = {3000, 3000, 4000 , 4000 , 4000};
+	public static String drinkName[] = {"레몬에이드" , "유자에이드", "망고에이드" , "자몽에이드" ,"청포도에이드", "랜덤에이드"};
+	public static int drinkPrice[] = {3000, 3000, 4000 , 4000 , 4000, 3500};
 	
 	
 	public void set(String drinkName , int drinkPrice) throws IOException
