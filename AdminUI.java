@@ -69,7 +69,10 @@ public class AdminUI
 
 	public static void exit()     // 프로그램종료 메소드
 	{
-		System.out.println("오늘 카페 운영을 마감합니다!!!!");
+		Cat.close();
+		System.out.println("┌────────────────────────────────────────────────────┐");
+		System.out.println("│  <---------- Random Cafe 마감합니다!! ---------->  │");
+		System.out.println("└────────────────────────────────────────────────────┘");
 		System.exit(0);
 	}
 }
