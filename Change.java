@@ -13,7 +13,7 @@ public class Change
 		change.put(10000,0);
 	}
 	
-	public static int sumCal()
+	public static int sum()
 	{
 		int sum = 0;
 		sum += 500 * change.get(500);
