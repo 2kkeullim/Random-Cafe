@@ -15,5 +15,6 @@ public class AddSales
 		Sales.drinkOrder[Cart.vc.get(temp-1).getCategoryNumber()][Cart.vc.get(temp-1).getDrinkNumber()] -= Cart.vc.get(temp-1).getCount();
 		Sales.categoryOrder[Cart.vc.get(temp-1).getDrinkNumber()] -= Cart.vc.get(temp-1).getCount();
 		Sales.totalOrder -= Cart.vc.get(temp-1).getCount();
+		Sales.profit -= Cart.vc.get(temp-1).getCount() * (Cart.vc.get(temp-1).getPrice() - COST[Cart.vc.get(temp-1).getCategoryNumber()]);
 	}
 }
