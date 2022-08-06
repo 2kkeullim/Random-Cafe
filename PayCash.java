@@ -49,9 +49,10 @@ public class PayCash
 			case 1: UserList.userLogin(); UserList.saveStampCash(); break;
 			case 2: Receipt.receiptDispForCash(); break;
 		}
-		Sales.totalCard += Cart.totalSum;     //카드 총매출 누적합.
-
-		Cart.vc.clear();
+		Sales.totalCash += Cart.totalSum;     //현금 총매출 누적합.
+		Sales.totalSale += Cart.totalSum;     //총매출 누적합.
+		
+		Cart.vc.clear();             
 		Cart.totalSum = 0;
 		System.out.println();
 		do

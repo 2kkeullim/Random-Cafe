@@ -16,7 +16,6 @@ public class Juice extends Options
 		Drink dr = new Drink("cold", iceOption, drinkCountOption);
 		dr.setName(drinkName);
 		dr.setPrice(drinkPrice);
-		AddSales.addSales(dr);
 		Cart.vc.add(dr);
 		if (DrinkUI.sel != 6)
 			Cart.overLap(dr);
