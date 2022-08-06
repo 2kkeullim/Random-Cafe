@@ -32,7 +32,8 @@ public class CouponUse
 					{
 						System.out.println("============================");
 						System.out.println("로그인에 성공하였습니다.");
-						System.out.println("보유 중인 쿠폰 수 : " + ul.user.get(ul.dispUserNumber-1).getCoupon());
+						System.out.println("보유 중인 쿠폰 수   : " + ul.user.get(ul.dispUserNumber-1).getCoupon());
+						System.out.println("보유 중인 스탬프 수 : " + ul.user.get(ul.dispUserNumber-1).getStamp());
 						System.out.println("============================");
 						cu.category();
 						cu.categoryRun();
@@ -56,7 +57,11 @@ public class CouponUse
 		System.out.print("메뉴 번호 입력 : " );
 		temp = Integer.parseInt(br.readLine());
 		Sales.totalCoupon += Cart.vc.get(temp-1).getPrice();
-		Cart.vc.get(temp-1).setPrice(0);
+		if(Cart.vc.get(temp-1).getCount() == 1)
+			Cart.vc.get(temp-1).setPrice(0);
+		else
+			Cart.vc.get(temp-1).setPrice(Cart.vc.get(temp-1).getPrice()-(Cart.vc.get(temp-1).getPrice()/(Cart.vc.get(temp-1).getCount())));
+		
 		Cart.couponUseCount++;
 		//ul.user.get(ul.dispUserNumber-1).setCoupon(minusCoupon-1);
 	}
