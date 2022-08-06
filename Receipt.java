@@ -42,12 +42,12 @@ public class Receipt
 		{	
 			switch (Cart.vc.get(i).getName())
 			{
-				case "랜덤커피"   : Cart.vc.get(i).setName(Coffee.drinkName[RandomDrink.roll()]); break;
-				case "랜덤라떼"   : Cart.vc.get(i).setName(NonCoffee.drinkName[RandomDrink.roll()]); break;
-				case "랜덤주스"   : Cart.vc.get(i).setName(Juice.drinkName[RandomDrink.roll()]); break;
-				case "랜덤스무디" : Cart.vc.get(i).setName(Smoothie.drinkName[RandomDrink.roll()]); break;
-				case "랜덤티"     : Cart.vc.get(i).setName(Tea.drinkName[RandomDrink.roll()]); break;
-				case "랜덤에이드" : Cart.vc.get(i).setName(Ade.drinkName[RandomDrink.roll()]); break;
+				case "랜덤커피"   : Cart.vc.get(i).setName("(Random) "+ Coffee.drinkName[RandomDrink.roll()]); break;
+				case "랜덤라떼"   : Cart.vc.get(i).setName("(Random) "+ NonCoffee.drinkName[RandomDrink.roll()]); break;
+				case "랜덤주스"   : Cart.vc.get(i).setName("(Random) "+ Juice.drinkName[RandomDrink.roll()]); break;
+				case "랜덤스무디" : Cart.vc.get(i).setName("(Random) "+ Smoothie.drinkName[RandomDrink.roll()]); break;
+				case "랜덤티"     : Cart.vc.get(i).setName("(Random) "+ Tea.drinkName[RandomDrink.roll()]); break;
+				case "랜덤에이드" : Cart.vc.get(i).setName("(Random) "+ Ade.drinkName[RandomDrink.roll()]); break;
 			}
 		}
 	}
