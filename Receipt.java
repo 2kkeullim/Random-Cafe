@@ -34,6 +34,7 @@ public class Receipt
 		}
 		else 
 			System.out.println("주문번호 OOO 감사합니다");
+		AddSales.addSales();
 	}
 
 	public static void detectRandom()
@@ -65,9 +66,11 @@ public class Receipt
 				, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount(), Cart.vc.get(i).getCount());
 		}
 
+
 		Cart.couponUseCount = 0;
 		Stamp.drinkCountForStamp = 0;
-    AddSales.addSales();
+
+
 
 	}
 
@@ -88,8 +91,10 @@ public class Receipt
 		System.out.printf("%d원		%d원%n", ReturnChange.pay, ReturnChange.getChangeSum());
 		System.out.println("------------------------------------");
 
+
 		Cart.couponUseCount = 0;
 		Stamp.drinkCountForStamp = 0;
-		AddSales.addSales();
+
+
 	}
 }

@@ -47,7 +47,7 @@ public class PayCash
 		switch(temp)
 		{
 			case 1: UserList.userLogin(); UserList.saveStampCash(); break;
-			case 2: Receipt.receiptDispForCash(); break;
+			case 2: Receipt.receiptDispRun(); break;
 		}
 		Sales.totalCash += Cart.totalSum;     //현금 총매출 누적합.
 		Sales.totalSale += Cart.totalSum;     //총매출 누적합.
