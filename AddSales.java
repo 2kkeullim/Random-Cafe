@@ -1,10 +1,13 @@
 public class AddSales
 {
+	public static final int[] COST = {1000 , 2000 , 1500, 2500 ,1000 ,1500};
+	//카테고리별 원가.  각 카테고리 클래스 안에 있는 원가는 삭제하여도 됨 (이곳에서만 쓰임.)
 	public static void addSales(Drink dr)
 	{
 		Sales.drinkOrder[CategoryUI.sel-1][DrinkUI.sel-1] += dr.getCount();
 		Sales.categoryOrder[CategoryUI.sel-1] += dr.getCount();
 		Sales.totalOrder -= dr.getCount();
+		Sales.profit += dr.getCount() * (dr.getPrice() - COST[CategoryUI.sel-1]);
 	}
 
 	public static void removeSales(int temp)
