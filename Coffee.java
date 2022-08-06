@@ -15,6 +15,7 @@ public class Coffee extends Options
 		Drink dr = new Drink(hotOrColdOption, iceOption, drinkCountOption);
 		dr.setName(drinkName);
 		dr.setPrice(drinkPrice);
+		AddSales.addSales(dr);
 		Cart.vc.add(dr);
 		Cart.overLap(dr);
 		Cart.printVC();
