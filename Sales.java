@@ -79,7 +79,7 @@ public class Sales
 	public static void coffeeSales() throws IOException
 	{
 		for (int i = 0; i < Coffee.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Coffee.drinkName[i], (((double)drinkOrder[0][i] / totalOrder) *100)); // 0.0은 각 음료 판매비율 변수로 바꿔주면 됨.
+			System.out.printf("%s : %.1f%%%n",Coffee.drinkName[i], (((double)drinkOrder[0][i] / categoryOrder[0] ) *100)); // 0.0은 각 음료 판매비율 변수로 바꿔주면 됨.
 		
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
@@ -91,7 +91,7 @@ public class Sales
 	public static void nonCoffeeSales() throws IOException
 	{
 		for (int i = 0; i < NonCoffee.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",NonCoffee.drinkName[i], (((double)drinkOrder[1][i] / totalOrder) *100));
+			System.out.printf("%s : %.1f%%%n",NonCoffee.drinkName[i], (((double)drinkOrder[1][i] / categoryOrder[1]) *100));
 		
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
@@ -103,7 +103,7 @@ public class Sales
 	public static void juiceSales() throws IOException
 	{
 		for (int i = 0; i < Juice.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Juice.drinkName[i],(((double)drinkOrder[2][i] / totalOrder) *100));
+			System.out.printf("%s : %.1f%%%n",Juice.drinkName[i],(((double)drinkOrder[2][i] / categoryOrder[2]) *100));
 
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
@@ -115,7 +115,7 @@ public class Sales
 	public static void smoothieSales() throws IOException
 	{
 		for (int i = 0; i < Smoothie.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Smoothie.drinkName[i],(((double)drinkOrder[3][i] / totalOrder) *100));
+			System.out.printf("%s : %.1f%%%n",Smoothie.drinkName[i],(((double)drinkOrder[3][i] / categoryOrder[3]) *100));
 
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
@@ -127,7 +127,7 @@ public class Sales
 	public static void teaSales() throws IOException
 	{
 		for (int i = 0; i < Tea.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Tea.drinkName[i],(((double)drinkOrder[4][i] / totalOrder) *100));
+			System.out.printf("%s : %.1f%%%n",Tea.drinkName[i],(((double)drinkOrder[4][i] / categoryOrder[4]) *100));
 
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
@@ -139,7 +139,7 @@ public class Sales
 	public static void adeSales() throws IOException
 	{
 		for (int i = 0; i < Ade.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Ade.drinkName[i],(((double)drinkOrder[5][i] / totalOrder) *100));
+			System.out.printf("%s : %.1f%%%n",Ade.drinkName[i],(((double)drinkOrder[5][i] / categoryOrder[5]) *100));
 
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
