@@ -24,7 +24,6 @@ public class UserList extends User
 	public static void userLogin() throws IOException
 	{
 		Scanner sc = new Scanner(System.in);
-
 		System.out.print("번호를 입력하세요 : " );
 		pn = sc.next(); 
 
@@ -56,12 +55,11 @@ public class UserList extends User
 				{
 					//System.out.println("수행돼버렸네?");
 					user.add(new User(pn));
-					sp.userStamp = user.get(i).getStamp();
-					sp.userCoupon = user.get(i).getCoupon();
+					sp.userStamp = user.get(user.size()-1).getStamp();
+					sp.userCoupon = user.get(user.size()-1).getCoupon();
 					sp.stampCal();
 					user.get(user.size()-1).setStamp(sp.userStamp);
 					user.get(user.size()-1).setCoupon(sp.userCoupon);
-					
 					
 					if (user.get(user.size()-1).getStamp() >= 10)
 					{

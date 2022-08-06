@@ -24,26 +24,28 @@ public class Stamp extends UserList
 			drinkCountForStamp	+= Cart.vc.get(i).getCount(); // 구매자가 구매한 음료 갯수
 		
 		
-		coupon += (drinkCountForStamp / 10); // 쿠폰 갯수
-		stamp += drinkCountForStamp - (coupon * 10); // 스탬프 갯수
+		//coupon += (drinkCountForStamp / 10); // 쿠폰 갯수
+		stamp += drinkCountForStamp; // 스탬프 갯수
 		
-		
+		/*
 		if(stamp % 10 == 0 && stamp != 0)
 		{
 			coupon += (stamp/10);
 			stamp = 0;
 		}
+		*/
 		
 
-		userCoupon += coupon; // 킴 - 2
-		userStamp += stamp;   // 킴 - 4
+		//userCoupon += coupon;
+		userStamp += stamp; 
 		
-		
+		/*
 		if (userStamp % 10 == 0 && userStamp != 0)
 		{
 			userCoupon += (userStamp/10);
 			userStamp = 0;
 		}
+		*/
 	}
 
 	public void printStampResult()
