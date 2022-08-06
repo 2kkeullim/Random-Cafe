@@ -16,6 +16,7 @@ public class Ade extends Options
 		Drink dr = new Drink("cold", iceOption, drinkCountOption);
 		dr.setName(drinkName);
 		dr.setPrice(drinkPrice);
+		AddSales.addSales(dr);
 		Cart.vc.add(dr);
 		Cart.overLap(dr);
 		Cart.printVC();
