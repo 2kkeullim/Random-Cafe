@@ -1,5 +1,6 @@
 import java.util.Vector;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class UserList extends User
 {
@@ -9,7 +10,7 @@ public class UserList extends User
 	public static String pn;
 	public static int couponForLogIn; 
 
-	public static void userLogin()
+	public static void userLogin() throws IOException
 	{
 		Scanner sc = new Scanner(System.in);
 		user.add(new User("김"));
@@ -60,10 +61,7 @@ public class UserList extends User
 					break;
 				}
 			}
-	}
-
-	public static void userVerify()
-	{
-		
+			System.out.print("적립완료.");
+			Receipt.receiptDispForCard();
 	}
 }
