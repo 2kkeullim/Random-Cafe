@@ -33,6 +33,7 @@ public class PayCard
 				case 2: Receipt.receiptDispForCard(); break;
 			}
 			Sales.totalCard += Cart.totalSum;     //카드 총매출 누적합.
+			Sales.totalSale += Cart.totalSum;     //현금 총매출 누적합.
 
 			Cart.vc.clear();
 			Cart.totalSum = 0;

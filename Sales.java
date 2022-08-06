@@ -11,22 +11,9 @@ public class Sales
 	public static int totalCash;   //현금매출
 	public static int totalCoupon; //무상판매금액
 	public static int totalOrder;   //총주문건수
-	public static int profit;
-	public static int[] categoryOrder = new int[6];
-	public static int[][] drinkOrder = new int[6][6];
-	/*
-	public static int[] coffeeOrder = new int[6];
-	public static int[] nonCoffeeOrder = new int[6];
-	public static int[] juiceOrder = new int[6];
-	public static int[] smoothieOrder = new int[6];
-	public static int[] teaOrder = new int[6];
-	public static int[] adeOrder = new int[6];*/
-
-	
-	static
-	{
-		totalSale = totalCard + totalCash;
-	}
+	public static int profit;       //순이익
+	public static int[] categoryOrder = new int[6];      //카테고리 별 주문건수(개수) 를 담을 배열
+	public static int[][] drinkOrder = new int[6][6];    //메뉴별 주문건수(개수)를 담을배열 [카테고리][메뉴 주문건수]
 
 	public static void salesManage() throws IOException
 	{
@@ -52,7 +39,7 @@ public class Sales
 	public static void eachDrinkSales() throws IOException
 	{
 		//0.0은 각 카테고리별 매출비율 변수로 바꿔주면 됨
-		System.out.printf("%n1. [커피] %.1f%%",((double)categoryOrder[0] / totalOrder) *100);
+		System.out.printf("%n1. [커피] %.1f%%",((double)categoryOrder[0] / totalOrder) *100);             // 커피 카테고리 주문건수 / 총주문건수.
 		System.out.printf("%n2. [논커피] %.1f%%",((double)categoryOrder[1] / totalOrder) *100);
 		System.out.printf("%n3. [주스] %.1f%%",((double)categoryOrder[2] / totalOrder) *100);
 		System.out.printf("%n4. [스무디] %.1f%%",((double)categoryOrder[3] / totalOrder) *100);
@@ -79,8 +66,7 @@ public class Sales
 	public static void coffeeSales() throws IOException
 	{
 		for (int i = 0; i < Coffee.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Coffee.drinkName[i], (((double)drinkOrder[0][i] / categoryOrder[0] ) *100)); // 0.0은 각 음료 판매비율 변수로 바꿔주면 됨.
-		
+			System.out.printf("%s : %.1f%%%n",Coffee.drinkName[i], (((double)drinkOrder[0][i] / categoryOrder[0] ) *100)); 
 		System.out.println("뒤로 가기 [ctrl+z]");
 		str = br.readLine();
 
