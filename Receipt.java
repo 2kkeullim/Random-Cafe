@@ -69,7 +69,7 @@ public class Receipt
 
 		Cart.couponUseCount = 0;
 		Stamp.drinkCountForStamp = 0;
-    AddSales.addSales();
+
 
 
 	}
@@ -94,7 +94,7 @@ public class Receipt
 
 		Cart.couponUseCount = 0;
 		Stamp.drinkCountForStamp = 0;
-		AddSales.addSales();
+
 
 	}
 }
