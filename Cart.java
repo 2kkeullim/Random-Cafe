@@ -29,7 +29,7 @@ public class Cart
 		switch(sel)
 		{
 			case 1 : Pay.cashOrCard(); break;
-			case 2 : remove(); break;
+			case 2 : remove();
 			case 3 : CategoryUI.category(); CategoryUI.categoryRun();break;
 					 
 		}
@@ -54,9 +54,9 @@ public class Cart
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("삭제할 항목의 번호를 입력하세요. : " );
 		int temp = Integer.parseInt(br.readLine());
-		vc.remove(temp-1);
-
+		AddSales.removeSales(temp);
 		totalSum -= vc.get(temp-1).getPrice() * vc.get(temp-1).getCount();
+		vc.remove(temp-1);
 	}
 
 	public static void total()
