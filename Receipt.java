@@ -18,6 +18,7 @@ public class Receipt
 	static int second = nt.getSecond();
 	static String[] week = {"일요일","월요일","화요일","수요일","목요일","금요일","토요일"};
 	static String temp;
+	static int receiptNumber;
 
 	public static void receiptDispRun() throws IOException
 	{
@@ -32,8 +33,14 @@ public class Receipt
 			else if (Pay.sel==2)
 				receiptDispForCash();	// 현금결제 시 현금 영수증
 		}
-		else 
-			System.out.println("주문번호 OOO 감사합니다");
+		if(receiptNumber<10)
+			System.out.printf("  주문번호 : 000%d\n", ++receiptNumber);
+		else if(receiptNumber>10 && receiptNumber<100 )
+			System.out.printf("  주문번호 : 00%d\n", ++receiptNumber);
+		else if(receiptNumber>100 && receiptNumber<1000 )
+			System.out.printf("  주문번호 : 0%d\n", ++receiptNumber);
+		else
+			System.out.printf("  주문번호 : %d\n", ++receiptNumber);
 		AddSales.addSales();
 	}
 
