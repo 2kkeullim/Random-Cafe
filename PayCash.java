@@ -35,7 +35,6 @@ public class PayCash
 		}
 		while (temp%500 != 0);
 	
-		
 		do
 		{
 			System.out.print("스탬프를 적립하시겠습니까? (예 : 1 , 아니오 : 2) : ");
@@ -47,7 +46,7 @@ public class PayCash
 		
 		switch(temp)
 		{
-			case 1: UserList.userLogin(); break;
+			case 1: UserList.userLogin(); UserList.saveStampCash(); break;
 			case 2: Receipt.receiptDispForCash(); break;
 		}
 		Sales.totalCard += Cart.totalSum;     //카드 총매출 누적합.

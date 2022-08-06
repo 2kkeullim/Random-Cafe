@@ -61,7 +61,17 @@ public class UserList extends User
 					break;
 				}
 			}
+	}
+
+	public static void saveStampCard()
+	{
 			System.out.print("적립완료.");
 			Receipt.receiptDispForCard();
+	}
+
+	public static void saveStampCash()
+	{
+			System.out.print("적립완료.");
+			Receipt.receiptDispForCash();
 	}
 }
