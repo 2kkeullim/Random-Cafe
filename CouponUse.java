@@ -23,23 +23,23 @@ public class CouponUse
 					
 					if (ul.couponForLogIn < 1)
 					{
-						System.out.println("사용가능한 쿠폰이 없습니다 !");
 						System.out.println("============================");
+						System.out.println("사용가능한 쿠폰이 없습니다!");
+						System.out.println("============================");
+						return;
 					}
 					else
 					{
-						System.out.println("쿠폰으로 구매할 메뉴를 골라주세요 !");
-						System.out.println("===================================");
 						cu.category();
 						cu.categoryRun();
 					}
 				}
 				else 
-					System.out.println("로그인에 실패했습니다.");
-	
+				{
+					System.out.println("============================");
+					System.out.println("일치하는 ID가 없습니다!");
+					System.out.println("============================");
+				}
 			}
-	
 	}
-
-
 }
