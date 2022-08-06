@@ -32,8 +32,11 @@ public class PayCard
 				case 1: UserList.userLogin(); break;
 				case 2: Receipt.receiptDispForCard(); break;
 			}
+			Sales.totalCard += Cart.totalSum;     //카드 총매출 누적합.
+
 			Cart.vc.clear();
 			Cart.totalSum = 0;
+			System.out.println();
 			do
 			{
 				InitialUI.menuDisp();
