@@ -8,6 +8,7 @@ public class Cart
 	public static Vector<Drink> vc = new Vector<Drink>();
 	public static int sel; 
 	public static int totalSum = 0; // 총 금액 변수
+	public static int couponUseCount = 0;
 
 	public static void printVC() throws IOException
 	{
@@ -28,10 +29,18 @@ public class Cart
 		sel = Integer.parseInt(br.readLine());
 		switch(sel)
 		{
-			case 1 : Pay.cashOrCard(); break;
+			case 1 : 
+				if(InitialUI.sel == 3 && couponUseCount == 0)
+				{
+					CouponUse.bargenByCoupon();
+					printVC();	
+					Pay.cashOrCard();
+				}
+				else
+					Pay.cashOrCard(); 
+				break;
 			case 2 : remove();                //삭제하면 다시 카테고리로 들어감.
 			case 3 : CategoryUI.category(); CategoryUI.categoryRun();break;
-					 
 		}
 	}
 

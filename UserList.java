@@ -9,6 +9,7 @@ public class UserList extends User
 	public static boolean flag;
 	public static String pn;
 	public static int couponForLogIn; 
+	public static int dispUserNumber;
 
 	public static void userLogin() throws IOException
 	{
@@ -39,6 +40,8 @@ public class UserList extends User
 					}
 					flag = true;
 					couponForLogIn = user.get(i).getCoupon();
+					user.get(i).setUserNumber(i+1);
+					dispUserNumber = user.get(i).getUserNumber();
 					break;
 					
 					
@@ -58,6 +61,8 @@ public class UserList extends User
 						user.get(user.size()-1).setStamp(user.get(user.size()-1).getStamp()%10);
 						user.get(user.size()-1).setCoupon(user.get(user.size()-1).getCoupon()+1);
 					}
+					user.get(user.size()-1).setUserNumber(user.size());
+					dispUserNumber = user.get(i).getUserNumber();
 					break;
 				}
 			}
@@ -65,13 +70,13 @@ public class UserList extends User
 
 	public static void saveStampCard()
 	{
-			System.out.print("적립완료.");
+			sp.printStampResult();
 			Receipt.receiptDispForCard();
 	}
 
 	public static void saveStampCash()
 	{
-			System.out.print("적립완료.");
+			sp.printStampResult();
 			Receipt.receiptDispForCash();
 	}
 }
