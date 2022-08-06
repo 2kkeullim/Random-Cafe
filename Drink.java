@@ -5,6 +5,8 @@ public class Drink
 	private String hoc;
 	private String ice;
 	private int count;
+	private int categoryNumber;
+	private int drinkNumber;
 
 	public Drink(String hoc, String ice, int count)
 	{
@@ -61,6 +63,26 @@ public class Drink
 	public void setCount(int count)
 	{
 		this.count = count;
+	}
+
+	public int getCategoryNumber()
+	{
+		return categoryNumber;
+	}
+	
+	public void setCategoryNumber(int categoryNumber)
+	{
+		this.categoryNumber = categoryNumber;
+	}
+
+	public int getDrinkNumber()
+	{
+		return count;
+	}
+	
+	public void settDrinkNumber(int drinkNuber)
+	{
+		this.drinkNumber = drinkNumber;
 	}
 
 }
