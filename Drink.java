@@ -13,6 +13,8 @@ public class Drink
 		this.hoc = hoc;
 		this.ice = ice;
 		this.count = count;
+		categoryNumber = CategoryUI.sel-1;
+		drinkNumber = DrinkUI.sel-1;
 	}
 
 	public String getName()
