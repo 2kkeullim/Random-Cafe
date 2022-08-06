@@ -16,7 +16,8 @@ public class NonCoffee extends Options
 		dr.setName(drinkName);
 		dr.setPrice(drinkPrice);
 		Cart.vc.add(dr);
-		Cart.overLap(dr);
+		if (DrinkUI.sel != 6)
+			Cart.overLap(dr);
 		Cart.printVC();
 	}
 }
