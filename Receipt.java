@@ -34,6 +34,7 @@ public class Receipt
 		}
 		else 
 			System.out.println("주문번호 OOO 감사합니다");
+		AddSales.addSales();
 	}
 
 	public static void detectRandom()
@@ -64,7 +65,6 @@ public class Receipt
 			System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
 				, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount(), Cart.vc.get(i).getCount());
 		}
-		AddSales.addSales();
 	}
 
 	public static void receiptDispForCash()
@@ -83,6 +83,5 @@ public class Receipt
 		System.out.println("지불하신 금액	거스름돈");
 		System.out.printf("%d원		%d원%n", ReturnChange.pay, ReturnChange.getChangeSum());
 		System.out.println("------------------------------------");
-		AddSales.addSales();
 	}
 }
