@@ -79,7 +79,7 @@ public class Drink
 
 	public int getDrinkNumber()
 	{
-		return count;
+		return drinkNumber;
 	}
 	
 	public void settDrinkNumber(int drinkNuber)
