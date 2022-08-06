@@ -38,105 +38,167 @@ public class Sales
 	// 각 카테고리별 판매비율 메소드
 	public static void eachDrinkSales() throws IOException
 	{
-		//0.0은 각 카테고리별 매출비율 변수로 바꿔주면 됨
-		System.out.printf("%n1. [커피] %.1f%%",((double)categoryOrder[0] / totalOrder) *100);             // 커피 카테고리 주문건수 / 총주문건수.
-		System.out.printf("%n2. [논커피] %.1f%%",((double)categoryOrder[1] / totalOrder) *100);
-		System.out.printf("%n3. [주스] %.1f%%",((double)categoryOrder[2] / totalOrder) *100);
-		System.out.printf("%n4. [스무디] %.1f%%",((double)categoryOrder[3] / totalOrder) *100);
-		System.out.printf("%n5. [티] %.1f%%",((double)categoryOrder[4] / totalOrder *100));
-		System.out.printf("%n6. [에이드] %.1f%%",((double)categoryOrder[5] / totalOrder *100));
-		System.out.printf("%n7. 뒤로 가기%n");
-		System.out.print("상세 항목 조회 (1 ~ 6) ");
-		AdminUI.sel = Integer.parseInt(br.readLine());
-		System.out.println();
-
-		switch (AdminUI.sel)
+		if(totalOrder == 0)
 		{
-			case 1 : coffeeSales(); break;
-			case 2 : nonCoffeeSales(); break;
-			case 3 : juiceSales(); break;
-			case 4 : smoothieSales(); break;
-			case 5 : teaSales(); break;
-			case 6 : adeSales(); break;
-			case 7 : return;
+			System.out.println("현재 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
+			return;
+		}
+		else
+		{
+			System.out.printf("%n1. [커피] %.1f%%",((double)categoryOrder[0] / totalOrder) *100);             // 커피 카테고리 주문건수 / 총주문건수.
+			System.out.printf("%n2. [논커피] %.1f%%",((double)categoryOrder[1] / totalOrder) *100);
+			System.out.printf("%n3. [주스] %.1f%%",((double)categoryOrder[2] / totalOrder) *100);
+			System.out.printf("%n4. [스무디] %.1f%%",((double)categoryOrder[3] / totalOrder) *100);
+			System.out.printf("%n5. [티] %.1f%%",((double)categoryOrder[4] / totalOrder *100));
+			System.out.printf("%n6. [에이드] %.1f%%",((double)categoryOrder[5] / totalOrder *100));
+			System.out.printf("%n7. 뒤로 가기%n");
+			System.out.print("상세 항목 조회 (1 ~ 6) : ");
+			AdminUI.sel = Integer.parseInt(br.readLine());
+			System.out.println();
+
+			switch (AdminUI.sel)
+			{
+				case 1 : coffeeSales(); break;
+				case 2 : nonCoffeeSales(); break;
+				case 3 : juiceSales(); break;
+				case 4 : smoothieSales(); break;
+				case 5 : teaSales(); break;
+				case 6 : adeSales(); break;
+				case 7 : return;
+			}
 		}
 	}
 
 	//상세항목 조회시 각 메뉴들 출력 메소드
 	public static void coffeeSales() throws IOException
 	{
-		for (int i = 0; i < Coffee.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Coffee.drinkName[i], (((double)drinkOrder[0][i] / categoryOrder[0] ) *100)); 
-		System.out.println("뒤로 가기 [ctrl+z]");
-		str = br.readLine();
-
-		if (str == null)
+		if(categoryOrder[0] == 0)
+		{
+			System.out.println("현재 해당 카테고리 내 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
 			eachDrinkSales();
+		}
+		
+		else
+		{
+			for (int i = 0; i < Coffee.drinkName.length; i++)
+				System.out.printf("%s : %.1f%%%n",Coffee.drinkName[i], (((double)drinkOrder[0][i] / categoryOrder[0] ) *100)); 
+			System.out.println("뒤로 가기 [ctrl+z]");
+			str = br.readLine();
+
+			if (str == null)
+				eachDrinkSales();
+		}
 	}
 
 	public static void nonCoffeeSales() throws IOException
 	{
-		for (int i = 0; i < NonCoffee.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",NonCoffee.drinkName[i], (((double)drinkOrder[1][i] / categoryOrder[1]) *100));
-		
-		System.out.println("뒤로 가기 [ctrl+z]");
-		str = br.readLine();
-
-		if (str == null)
+		if(categoryOrder[1] == 0)
+		{
+			System.out.println("현재 해당 카테고리 내 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
 			eachDrinkSales();
+		}
+		
+		else
+		{
+			for (int i = 0; i < NonCoffee.drinkName.length; i++)
+				System.out.printf("%s : %.1f%%%n",NonCoffee.drinkName[i], (((double)drinkOrder[1][i] / categoryOrder[1]) *100));
+			
+			System.out.println("뒤로 가기 [ctrl+z]");
+			str = br.readLine();
+
+			if (str == null)
+				eachDrinkSales();
+		}
 	}
 
 	public static void juiceSales() throws IOException
 	{
-		for (int i = 0; i < Juice.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Juice.drinkName[i],(((double)drinkOrder[2][i] / categoryOrder[2]) *100));
-
-		System.out.println("뒤로 가기 [ctrl+z]");
-		str = br.readLine();
-
-		if (str == null)
+		if(categoryOrder[2] == 0)
+		{
+			System.out.println("현재 해당 카테고리 내 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
 			eachDrinkSales();
+		}
+		
+		else
+		{
+			for (int i = 0; i < Juice.drinkName.length; i++)
+				System.out.printf("%s : %.1f%%%n",Juice.drinkName[i],(((double)drinkOrder[2][i] / categoryOrder[2]) *100));
+
+			System.out.println("뒤로 가기 [ctrl+z]");
+			str = br.readLine();
+
+			if (str == null)
+				eachDrinkSales();
+		}
 	}
 
 	public static void smoothieSales() throws IOException
 	{
-		for (int i = 0; i < Smoothie.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Smoothie.drinkName[i],(((double)drinkOrder[3][i] / categoryOrder[3]) *100));
-
-		System.out.println("뒤로 가기 [ctrl+z]");
-		str = br.readLine();
-
-		if (str == null)
+		if(categoryOrder[3] == 0)
+		{
+			System.out.println("현재 해당 카테고리 내 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
 			eachDrinkSales();
+		}
+		
+		else
+		{
+			for (int i = 0; i < Smoothie.drinkName.length; i++)
+				System.out.printf("%s : %.1f%%%n",Smoothie.drinkName[i],(((double)drinkOrder[3][i] / categoryOrder[3]) *100));
+
+			System.out.println("뒤로 가기 [ctrl+z]");
+			str = br.readLine();
+
+			if (str == null)
+				eachDrinkSales();
+		}
 	}
 
 	public static void teaSales() throws IOException
 	{
-		for (int i = 0; i < Tea.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Tea.drinkName[i],(((double)drinkOrder[4][i] / categoryOrder[4]) *100));
+		if(categoryOrder[4] == 0)
+		{
+			System.out.println("현재 해당 카테고리 내 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
+			
+		}
+		
+		else
+		{
+			for (int i = 0; i < Tea.drinkName.length; i++)
+				System.out.printf("%s : %.1f%%%n",Tea.drinkName[i],(((double)drinkOrder[4][i] / categoryOrder[4]) *100));
 
-		System.out.println("뒤로 가기 [ctrl+z]");
-		str = br.readLine();
+			System.out.println("뒤로 가기 [ctrl+z]");
+			str = br.readLine();
 
-		if (str == null)
-			eachDrinkSales();
+			if (str == null)
+				eachDrinkSales();
+		}
 	}
 
 	public static void adeSales() throws IOException
 	{
-		for (int i = 0; i < Ade.drinkName.length; i++)
-			System.out.printf("%s : %.1f%%%n",Ade.drinkName[i],(((double)drinkOrder[5][i] / categoryOrder[5]) *100));
-
-		System.out.println("뒤로 가기 [ctrl+z]");
-		str = br.readLine();
-
-		if (str == null)
+		if(categoryOrder[5] == 0)
+		{
+			System.out.println("현재 해당 카테고리 내 판매된 음료가 없습니다. ");
+			System.out.println("============================ ");
 			eachDrinkSales();
-	}
-
-
-	public static void mian(String[] args)
-	{
+		}
 		
+		else
+		{
+			for (int i = 0; i < Ade.drinkName.length; i++)
+				System.out.printf("%s : %.1f%%%n",Ade.drinkName[i],(((double)drinkOrder[5][i] / categoryOrder[5]) *100));
+
+			System.out.println("뒤로 가기 [ctrl+z]");
+			str = br.readLine();
+
+			if (str == null)
+				eachDrinkSales();
+		}
 	}
 }
