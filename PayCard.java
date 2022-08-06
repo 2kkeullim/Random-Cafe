@@ -29,7 +29,7 @@ public class PayCard
 			}
 			switch(temp)
 			{
-				case 1: UserList.userLogin(); UserList.saveStampCard(); break;
+				case 1: UserList.userLogin(); UserList.saveStampCard();
 				case 2: Receipt.receiptDispRun(); break;
 			}
 			Sales.totalCard += Cart.totalSum;     //카드 총매출 누적합.
