@@ -3,6 +3,7 @@ public class User
 	private String phoneNumber;
 	private int stamp = 0;
 	private int coupon = 0;
+	private int userNumber;
 
 	User()		// default 생성자
 	{
@@ -43,5 +44,15 @@ public class User
 	public void setCoupon(int coupon)
 	{
 		this.coupon = coupon;
+	}
+
+	public int getUserNumber()
+	{
+		return userNumber;
+	}
+
+	public void setUserNumber(int userNumber)
+	{
+		this.userNumber = userNumber;
 	}
 }
