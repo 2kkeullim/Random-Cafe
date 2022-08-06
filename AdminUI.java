@@ -48,8 +48,8 @@ public class AdminUI
 	{
 		switch (sel)
 		{
-			case 1: sales(); break;
-			case 2: salesRatio(); break;
+			case 1: Sales.salesManage(); break;
+			case 2: Sales.eachDrinkSales(); break;
 			case 3: ChangeUI.change(); break;
 			case 4: AddChange.addChanges(); break;
 			case 5: exit(); break;
