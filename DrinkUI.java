@@ -15,20 +15,19 @@ public class DrinkUI
 	
 	public static void drinkRun() throws IOException
 	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		do
 		{
 			System.out.println();
 			for (int i = 0; i < category[CategoryUI.sel-1].length; i++)
 				System.out.printf("%s%n", category[CategoryUI.sel-1][i]);
-			System.out.println();
 
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-			System.out.print("음료를 선택하세요 : ");
+			System.out.print("\n>> 음료를 선택하세요 : ");
 			sel = Integer.parseInt(br.readLine()); 
 
 			if (sel >= 1 && sel <= 6)
-				switch(CategoryUI.sel)
+				switch (CategoryUI.sel)
 				{
 					case 1: new Coffee().set(Coffee.drinkName[sel-1], Coffee.drinkPrice[sel-1]); break;
 					case 2: new NonCoffee().set(NonCoffee.drinkName[sel-1], NonCoffee.drinkPrice[sel-1]); break;
@@ -38,9 +37,7 @@ public class DrinkUI
 					case 6: new Ade().set(Ade.drinkName[sel-1], Ade.drinkPrice[sel-1]); break;
 				}
 			else if (sel != 7)
-			{
 				System.out.println("\n다시 입력하세요\n");
-			}
 		}
 		while(sel != 7);
 	}
