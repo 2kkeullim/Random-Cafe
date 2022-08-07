@@ -13,6 +13,10 @@ public class Cat
 		System.out.println("          |      |   |      |   |      |               ");
 		System.out.println("           U￣￣U     U￣￣U     U￣￣U                ");
 		System.out.println();
+		System.out.println("┌────────────────────────────────────────────────────┐");
+		System.out.println("│  <---------- Random Cafe 오픈합니다!! ---------->  │");
+		System.out.println("└────────────────────────────────────────────────────┘");
+		System.out.println();
 	}
 
 	public static void close()
@@ -28,5 +32,9 @@ public class Cat
 		System.out.println("          |      |   |      |   |      |               ");
 		System.out.println("           U￣￣U     U￣￣U     U￣￣U                ");
 		System.out.println();
+		System.out.println("┌────────────────────────────────────────────────────┐");
+		System.out.println("│  <---------- Random Cafe 마감합니다!! ---------->  │");
+		System.out.println("└────────────────────────────────────────────────────┘");
+		System.exit(0);
 	}	
 }
