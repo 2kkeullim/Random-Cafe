@@ -7,6 +7,7 @@ public class Drink
 	private int count;
 	private int categoryNumber;
 	private int drinkNumber;
+	private boolean couponUse;
 
 	public Drink(String hoc, String ice, int count)
 	{
@@ -85,6 +86,16 @@ public class Drink
 	public void settDrinkNumber(int drinkNuber)
 	{
 		this.drinkNumber = drinkNumber;
+	}
+
+	public boolean getCouponUse()
+	{
+		return couponUse;
+	}
+	
+	public void setCouponUse(boolean couponUse)
+	{
+		this.couponUse = couponUse;
 	}
 
 }

@@ -19,8 +19,16 @@ public class Cart
 		System.out.println("------------------------------------");
 		for(int i=0;i < vc.size();i++)
 		{
-			System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
-				, vc.get(i).getPrice() * vc.get(i).getCount() ,vc.get(i).getCount());
+			if(vc.get(i).getCouponUse() == true)
+			{
+				System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
+					, vc.get(i).getPrice() * vc.get(i).getCount() ,vc.get(i).getCount()+1);
+			}
+			else
+			{
+				System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
+					, vc.get(i).getPrice() * vc.get(i).getCount() ,vc.get(i).getCount());
+			}
 		}
 		System.out.println("------------------------------------");
 		System.out.println("총 금액 : " + totalSum);

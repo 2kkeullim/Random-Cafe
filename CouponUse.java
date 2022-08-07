@@ -60,9 +60,9 @@ public class CouponUse
 		if(Cart.vc.get(temp-1).getCount() == 1)
 			Cart.vc.get(temp-1).setPrice(0);
 		else
-			Cart.vc.get(temp-1).setPrice(Cart.vc.get(temp-1).getPrice()-(Cart.vc.get(temp-1).getPrice()/(Cart.vc.get(temp-1).getCount())));
+			Cart.vc.get(temp-1).setCount(Cart.vc.get(temp-1).getCount()-1);
 		
 		Cart.couponUseCount++;
-		//ul.user.get(ul.dispUserNumber-1).setCoupon(minusCoupon-1);
+		Cart.vc.get(temp-1).setCouponUse(true);
 	}
 }

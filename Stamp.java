@@ -19,33 +19,32 @@ public class Stamp extends UserList
 			Cart.couponUseCount = 0;
 		}
 
-
 		for(int i=0;i < Cart.vc.size();i++)
+		{
 			drinkCountForStamp	+= Cart.vc.get(i).getCount(); // 구매자가 구매한 음료 갯수
+
+			if(Cart.vc.get(i).getCouponUse() == true)
+			{
+				drinkCountForStamp ++;
+				Cart.vc.get(i).setCouponUse(false);
+			}
+		}
 		
-		
-		//coupon += (drinkCountForStamp / 10); // 쿠폰 갯수
 		stamp += drinkCountForStamp; // 스탬프 갯수
 		
-		/*
-		if(stamp % 10 == 0 && stamp != 0)
+		if (stamp >= 10)
 		{
-			coupon += (stamp/10);
-			stamp = 0;
+			userCoupon += (stamp / 10);
+			userStamp = stamp%10;
 		}
-		*/
-		
+		else
+			userStamp += stamp;
 
-		//userCoupon += coupon;
-		userStamp += stamp; 
-		
-		/*
-		if (userStamp % 10 == 0 && userStamp != 0)
+		if (userStamp >= 10)
 		{
-			userCoupon += (userStamp/10);
-			userStamp = 0;
+			userCoupon++;
+			userStamp %= 10;
 		}
-		*/
 	}
 
 	public void printStampResult()

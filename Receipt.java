@@ -69,8 +69,16 @@ public class Receipt
 		System.out.println("------------------------------------");
 		for(int i=0;i < Cart.vc.size();i++)
 		{
-			System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
-				, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount(), Cart.vc.get(i).getCount());
+			if(Cart.vc.get(i).getCouponUse() == true)
+			{
+				System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
+					, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount() ,Cart.vc.get(i).getCount()+1);
+			}
+			else
+			{
+				System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
+					, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount() ,Cart.vc.get(i).getCount());
+			}
 		}
 	}
 
@@ -83,8 +91,16 @@ public class Receipt
 		System.out.println("------------------------------------");
 		for(int i=0;i < Cart.vc.size();i++)
 		{
-			System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
-				, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount(), Cart.vc.get(i).getCount());
+			if(Cart.vc.get(i).getCouponUse() == true)
+			{
+				System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
+					, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount() ,Cart.vc.get(i).getCount()+1);
+			}
+			else
+			{
+				System.out.printf("\n%d번 %s  %s  %s  %d원  %d개\n",i+1, Cart.vc.get(i).getName(), Cart.vc.get(i).getHoc(), Cart.vc.get(i).getIce()
+					, Cart.vc.get(i).getPrice() * Cart.vc.get(i).getCount() ,Cart.vc.get(i).getCount());
+			}
 		}
 		System.out.println("------------------------------------");
 		System.out.println("지불하신 금액	거스름돈");

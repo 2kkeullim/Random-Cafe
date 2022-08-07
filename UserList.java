@@ -31,13 +31,15 @@ public class UserList extends User
 			{
 				if (user.get(i).getPhoneNumber().equals(pn))
 				{
+					user.get(i).setUserNumber(i+1);
+					dispUserNumber = user.get(i).getUserNumber();
 					sp.userStamp = user.get(i).getStamp();
 					sp.userCoupon = user.get(i).getCoupon();
 					sp.stampCal();
 					user.get(i).setStamp(sp.userStamp);
 					user.get(i).setCoupon(sp.userCoupon);
-					
-					
+					System.out.println("로그인한고 적립계산 후 유저의 스탬프 : " + sp.userStamp);
+						
 					if (user.get(i).getStamp() >= 10)
 					{
 						user.get(i).setStamp(user.get(i).getStamp()%10);
@@ -46,29 +48,26 @@ public class UserList extends User
 					
 					flag = true;
 					couponForLogIn = user.get(i).getCoupon();
-					user.get(i).setUserNumber(i+1);
-					dispUserNumber = user.get(i).getUserNumber();
 					break;
 				}
 
 				else if(!user.get(i).getPhoneNumber().equals(pn) && i == user.size()-1)
 				{
-					//System.out.println("수행돼버렸네?");
+					user.get(user.size()-1).setUserNumber(user.size());
+					dispUserNumber = user.get(user.size()-1).getUserNumber();
 					user.add(new User(pn));
 					sp.userStamp = user.get(user.size()-1).getStamp();
 					sp.userCoupon = user.get(user.size()-1).getCoupon();
 					sp.stampCal();
 					user.get(user.size()-1).setStamp(sp.userStamp);
 					user.get(user.size()-1).setCoupon(sp.userCoupon);
-					
+						
 					if (user.get(user.size()-1).getStamp() >= 10)
 					{
 						user.get(user.size()-1).setStamp(user.get(user.size()-1).getStamp()%10);
 						user.get(user.size()-1).setCoupon(user.get(user.size()-1).getCoupon()+1);
 					}
 					
-					user.get(user.size()-1).setUserNumber(user.size());
-					dispUserNumber = user.get(i).getUserNumber();
 					break;
 				}
 			}
