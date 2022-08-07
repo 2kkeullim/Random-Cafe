@@ -48,7 +48,7 @@ public class Cart
 					Pay.cashOrCard(); 
 				break;
 			case 2 : remove();                //삭제하면 다시 카테고리로 들어감.
-			case 3 : CategoryUI.category(); CategoryUI.categoryRun();break;
+			case 3 : CategoryUI.categoryRun(); break;
 		}
 	}
 
@@ -71,7 +71,6 @@ public class Cart
 		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("삭제할 항목의 번호를 입력하세요. : " );
 		int temp = Integer.parseInt(br.readLine());
-		//AddSales.removeSales(temp);
 		totalSum -= vc.get(temp-1).getPrice() * vc.get(temp-1).getCount();
 		vc.remove(temp-1);
 	}
