@@ -108,11 +108,13 @@ public class ReturnChange
 			System.out.printf("%n총 거스름돈 %d원 입니다.%n",returnChangeSum);
 			System.out.println("===============================");
 		}
+		
 		else
 		{
 			System.out.println("======================================");
 			System.out.println("잔돈이 부족하니 카운터로 문의해주세요.");
 			System.out.println("======================================");
+			
 			Cart.vc.clear();
 			Cart.totalSum = 0;
 			do
@@ -122,10 +124,9 @@ public class ReturnChange
 				InitialUI.menuRun();
 			}
 			while (true);
-
 		}
 		changeReNew();
-
+		changeReset();
 	}
 	
 	public static void changeReNew() // 잔돈 보유량 갱신
@@ -141,10 +142,15 @@ public class ReturnChange
 		return returnChangeSum;
 	}
 
-	public static void main(String[] args) throws IOException
+	public static void changeReset()
 	{
-		changeCal();
-		changePrint();
-		changeReNew();
+		count10000 = 0;
+		count5000 = 0;
+		count1000 = 0;
+		count500 = 0;	
+		returnChange500 = 0;
+		returnChange1000 = 0;
+		returnChange5000 = 0;
+		returnChange10000 = 0;
 	}
 }
