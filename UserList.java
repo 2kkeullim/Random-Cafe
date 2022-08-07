@@ -38,7 +38,6 @@ public class UserList extends User
 					sp.stampCal();
 					user.get(i).setStamp(sp.userStamp);
 					user.get(i).setCoupon(sp.userCoupon);
-					System.out.println("로그인한고 적립계산 후 유저의 스탬프 : " + sp.userStamp);
 						
 					if (user.get(i).getStamp() >= 10)
 					{
