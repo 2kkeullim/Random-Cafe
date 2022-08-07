@@ -4,8 +4,8 @@ import java.io.IOException;
 
 public class InitialUI
 {
-	public static final int takeOut = 1;
-	public static final int forHere = 2;
+	public static final int forHere = 1;
+	public static final int takeOut = 2;
 	public static final int couponUse = 3;
 	public static final int adminLogin = 4;
 	public static int sel = 1;
@@ -20,7 +20,7 @@ public class InitialUI
 		System.out.println("│                   3. 쿠폰  사용                    │");
 		System.out.println("│                   4. 관리자모드                    │");
 		System.out.println("└────────────────────────────────────────────────────┘");
-		System.out.print("\n>> 선택(1 ~ 4) : ");
+		System.out.print("\n>> 원하시는 서비스를 선택하세요 (1 ~ 4) : ");
 	}
 	
 	public static void initialSelect() throws IOException, NumberFormatException
@@ -31,7 +31,7 @@ public class InitialUI
 		{
 			sel = Integer.parseInt(br.readLine());
 
-			if (sel >= takeOut && sel <= adminLogin)
+			if (sel >= forHere && sel <= adminLogin)
 				break;
 			else
 			{
@@ -46,8 +46,8 @@ public class InitialUI
 	{
 		switch (sel)
 		{
-			case takeOut:
-			case forHere:		CategoryUI.categoryRun(); break;	
+			case forHere:
+			case takeOut:		CategoryUI.categoryRun(); break;	
 			case couponUse:		CouponUse.couponRun(); break;
 			case adminLogin:	Admin.open(); break;
 		}

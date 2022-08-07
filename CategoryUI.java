@@ -4,14 +4,22 @@ import java.io.IOException;
 
 public class CategoryUI
 {
+	public static final int coffee = 1;
+	public static final int nonCoffee = 2;
+	public static final int juice = 3;
+	public static final int smoothie = 4;
+	public static final int tea = 5;
+	public static final int ade = 6;
+	public static final int cart = 7;
+	public static final int back = 8;
 	public static int sel = 1;
 
 	public static void categoryDisp()
 	{
 		System.out.println("┌────────────────────────────────────────────────────┐");
-		if (InitialUI.sel == 1)
+		if (InitialUI.sel == InitialUI.forHere)
 			System.out.println("│                       [매장]                       │");
-		else if (InitialUI.sel == 2)
+		else if (InitialUI.sel == InitialUI.takeOut)
 			System.out.println("│                       [포장]                       │");
 		System.out.println("│                                                    │");		
 		System.out.println("│                      1. coffee                     │");
@@ -34,17 +42,27 @@ public class CategoryUI
 		{
 			sel = Integer.parseInt(br.readLine());
 
-			if (sel >= 1 && sel <= 6)
+			if (sel >= coffee && sel <= ade)
 				DrinkUI.drinkRun();
-			else if (sel != 7 && sel != 8)
+			else if (sel != cart && sel != back)
 				System.out.println("\n다시 입력하세요.\n");
-			else if (sel == 7)
+			else if (sel == cart)
 				Cart.printVC();
-			if (sel == 7 || sel == 8)
+			
+			if (sel == back)
+			{
+				Cart.vc.clear();
+				Cart.totalSum = 0;
+				Cafe.operate();
+			}
+
+			if (sel == cart || sel == back)
 				break;
+			
 			categoryDisp();
+
 		}
-		while (sel != 7 && sel != 8);
+		while (sel != cart || sel != back);
 	}
 
 	public static void categoryRun() throws IOException
