@@ -55,13 +55,8 @@ public class PayCash
 		Cart.vc.clear();             
 		Cart.totalSum = 0;
 		System.out.println();
-		do
-		{
-			InitialUI.menuDisp();
-			InitialUI.menuSelect();
-			InitialUI.menuRun();
-		}
-		while (true);
+
+		Cafe.operate();
 	}
 
 }
