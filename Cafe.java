@@ -16,34 +16,29 @@ public class Cafe
 		System.out.println("│   매장, 포장, 쿠폰 사용 선택이 불가합니다.         │");
 		System.out.println("└────────────────────────────────────────────────────┘");
 
-		
 		do
 		{
-			InitialUI.menuDisp();
-			InitialUI.menuSelect();
+			InitialUI.initialDisp();
+			InitialUI.initialSelect();
 			if (InitialUI.sel != InitialUI.adminLogin)
 			{
 				System.out.println("\n4번을 눌러서 관리자 모드로 들어가주세요!\n");
 				continue;
 			}
-			InitialUI.menuRun();
+			InitialUI.initialRun();
 		}
 		while (InitialUI.sel != InitialUI.adminLogin);
 
 		Cat.open();
-		System.out.println("┌────────────────────────────────────────────────────┐");
-		System.out.println("│  <---------- Random Cafe 오픈합니다!! ---------->  │");
-		System.out.println("└────────────────────────────────────────────────────┘");
-		System.out.println();
 	}
 
 	public static void operate() throws IOException
 	{
 		do
 		{
-			InitialUI.menuDisp();
-			InitialUI.menuSelect();
-			InitialUI.menuRun();
+			InitialUI.initialDisp();
+			InitialUI.initialSelect();
+			InitialUI.initialRun();
 		}
 		while (true);
 	}
