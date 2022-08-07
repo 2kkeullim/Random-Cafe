@@ -117,13 +117,8 @@ public class ReturnChange
 			
 			Cart.vc.clear();
 			Cart.totalSum = 0;
-			do
-			{
-				InitialUI.menuDisp();
-				InitialUI.menuSelect();
-				InitialUI.menuRun();
-			}
-			while (true);
+
+			Cafe.operate();
 		}
 		changeReNew();
 		changeReset();
