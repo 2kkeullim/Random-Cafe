@@ -59,8 +59,7 @@ public class CouponUse
 		Sales.totalCoupon += Cart.vc.get(temp-1).getPrice();
 		if(Cart.vc.get(temp-1).getCount() == 1)
 			Cart.vc.get(temp-1).setPrice(0);
-		else
-			Cart.vc.get(temp-1).setCount(Cart.vc.get(temp-1).getCount()-1);
+		Cart.vc.get(temp-1).setCount(Cart.vc.get(temp-1).getCount()-1);
 		
 		Cart.couponUseCount++;
 		Cart.vc.get(temp-1).setCouponUse(true);
