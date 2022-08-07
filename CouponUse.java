@@ -35,7 +35,6 @@ public class CouponUse
 						System.out.println("보유 중인 스탬프 수 : " + ul.user.get(ul.dispUserNumber-1).getStamp());
 						System.out.println("보유 중인 쿠폰 수   : " + ul.user.get(ul.dispUserNumber-1).getCoupon());
 						System.out.println("============================");
-						cu.category();
 						cu.categoryRun();
 					}
 				}
