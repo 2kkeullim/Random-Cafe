@@ -8,7 +8,8 @@ public class Pay
 	public static final int cash = 2;
 	public static final int yes = 1;
 	public static final int no = 2;
-	public static int sel = 1;
+	public static int selPay = 1;
+	public static int selStamp = 1;
 	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
 
 	public static void cashOrCard() throws IOException
@@ -16,30 +17,30 @@ public class Pay
 		do
 		{
 			System.out.print(">> 결제 방식을 선택하여 주십시오. (1: 카드 결제,  2: 현금 결제) : ");
-			sel = Integer.parseInt(br.readLine());
+			selPay = Integer.parseInt(br.readLine());
 
-			if (sel < card || sel > cash)
+			if (selPay < card || selPay > cash)
 			{
 				System.out.println("다시 입력해 주십시오.");
 				continue;
 			}
 
-			switch (sel)
+			switch (selPay)
 			{
 				case card: PayCard.cardInsert(); break;
 				case cash: PayCash.cashInsert(); break;
 			}
 		}
-		while (sel < card || sel > cash);	
+		while (selPay < card || selPay > cash);	
 	}
 
 	public static void insert() throws IOException
 	{
 		String str;
 
-		if (sel == card)
+		if (selPay == card)
 			System.out.println("\n──────────────────── [카드  결제] ────────────────────");
-		else if (sel == cash)
+		else if (selPay == cash)
 			System.out.println("\n──────────────────── [현금  결제] ────────────────────");
 
 		do
@@ -58,14 +59,14 @@ public class Pay
 		do
 		{
 			System.out.print(">> 스탬프를 적립하시겠습니까? (예 : 1 , 아니오 : 2) : ");
-			sel = Integer.parseInt(br.readLine());
+			selStamp = Integer.parseInt(br.readLine());
 
-			if (sel < yes || sel > no)
+			if (selStamp < yes || selStamp > no)
 				System.out.println("다시 입력해 주십시오.");
 		}
-		while (sel < 1 || sel > no);
+		while (selStamp < 1 || selStamp > no);
 		
-		switch (sel)
+		switch (selStamp)
 		{
 			case yes: UserList.userLogin(); UserList.saveStampCash();
 			case no: Receipt.receiptDispRun(); break;
