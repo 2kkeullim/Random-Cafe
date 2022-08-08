@@ -23,7 +23,7 @@ public class Receipt
 	public static void receiptDispRun() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("영수증을 출력하시겠습니까? (출력 : Y 또는 y) ");
+		System.out.print(">> 영수증을 출력하시겠습니까? (출력 : Y 또는 y) ");
 		temp = br.readLine();
 		
 		if (temp.equals("Y") || temp.equals("y"))
