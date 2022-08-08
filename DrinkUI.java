@@ -21,10 +21,10 @@ public class DrinkUI
 
 		do
 		{
-			System.out.println("\n                      " + category[CategoryUI.sel-1]);
+			System.out.println("\n                      " + category[CategoryUI.sel - 1]);
 			System.out.println("──────────────────────────────────────────────────────");
 			for (int i = 0; i < drink[CategoryUI.sel-1].length; i++)
-				System.out.printf(" - %s%n", drink[CategoryUI.sel-1][i]);
+				System.out.printf(" - %s%n", drink[CategoryUI.sel - 1][i]);
 			System.out.println("──────────────────────────────────────────────────────");
 
 			System.out.print("\n>> 음료를 선택하세요 : ");
@@ -33,12 +33,12 @@ public class DrinkUI
 			if (sel >= 1 && sel <= 6)
 				switch (CategoryUI.sel)
 				{
-					case 1: new Coffee().set(Coffee.drinkName[sel-1], Coffee.drinkPrice[sel-1]); break;
-					case 2: new NonCoffee().set(NonCoffee.drinkName[sel-1], NonCoffee.drinkPrice[sel-1]); break;
-					case 3: new Juice().set(Juice.drinkName[sel-1], Juice.drinkPrice[sel-1]); break;
-					case 4: new Smoothie().set(Smoothie.drinkName[sel-1], Smoothie.drinkPrice[sel-1]); break;
-					case 5: new Tea().set(Tea.drinkName[sel-1], Tea.drinkPrice[sel-1]); break;
-					case 6: new Ade().set(Ade.drinkName[sel-1], Ade.drinkPrice[sel-1]); break;
+					case CategoryUI.coffee		: new Coffee().set(Coffee.drinkName[sel - 1], Coffee.drinkPrice[sel - 1]);			break;
+					case CategoryUI.nonCoffee	: new NonCoffee().set(NonCoffee.drinkName[sel - 1], NonCoffee.drinkPrice[sel - 1]);	break;
+					case CategoryUI.juice		: new Juice().set(Juice.drinkName[sel - 1], Juice.drinkPrice[sel - 1]);				break;
+					case CategoryUI.smoothie	: new Smoothie().set(Smoothie.drinkName[sel - 1], Smoothie.drinkPrice[sel - 1]);	break;
+					case CategoryUI.tea			: new Tea().set(Tea.drinkName[sel - 1], Tea.drinkPrice[sel - 1]);					break;
+					case CategoryUI.ade			: new Ade().set(Ade.drinkName[sel - 1], Ade.drinkPrice[sel - 1]);					break;
 				}
 			else if (sel != 7)
 				System.out.println("\n다시 입력하세요\n");
