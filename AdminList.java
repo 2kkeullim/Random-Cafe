@@ -1,5 +1,4 @@
 import java.util.HashMap;
-// import java.util.Map;
 import java.util.Vector;
 
 public class AdminList // 관리자 id와 pw를 담을 구조생성
