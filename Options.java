@@ -73,8 +73,8 @@ public class Options
 
 		do
 		{
-			System.out.print(">> 선택하신 음료의 개수를 선택하세요.");
-			System.out.print(">> 한번에 최대 음료 갯수는 30개의 음료를 입력받을 수 있습니다. : ");
+			System.out.println(">> 선택하신 음료의 개수를 선택하세요.");
+			System.out.print(">> 입력 가능한 최대 음료 갯수는 한 번에 30개입니다. : ");
 			drinkCountOption = Integer.parseInt(br.readLine());
 
 			if (drinkCountOption < 1 || drinkCountOption > 30)
