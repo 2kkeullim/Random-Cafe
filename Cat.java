@@ -1,5 +1,6 @@
 public class Cat
 {
+	// 오픈시 힘낼 수 있게 해주는 고양이 메소드
 	public static void open()
 	{
 		System.out.println();
@@ -18,7 +19,8 @@ public class Cat
 		System.out.println("└────────────────────────────────────────────────────┘");
 		System.out.println();
 	}
-
+	
+	// 마감시 아쉬워하는 고양이 메소드
 	public static void close()
 	{
 		System.out.println();
@@ -35,6 +37,7 @@ public class Cat
 		System.out.println("┌────────────────────────────────────────────────────┐");
 		System.out.println("│  <---------- Random Cafe 마감합니다!! ---------->  │");
 		System.out.println("└────────────────────────────────────────────────────┘");
+		// 마감시 고양이를 출력해주고 동시에 프로그램 전체 종료
 		System.exit(0);
 	}	
 }

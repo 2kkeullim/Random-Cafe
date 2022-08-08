@@ -13,7 +13,8 @@ public class CategoryUI
 	public static final int cart = 7;
 	public static final int back = 8;
 	public static int sel = 1;
-
+	
+	// 음료 카테고리 출력 메소드
 	public static void categoryDisp()
 	{
 		System.out.println("┌────────────────────────────────────────────────────┐");
@@ -35,7 +36,8 @@ public class CategoryUI
 		System.out.println("└────────────────────────────────────────────────────┘");
 		System.out.print("\n>> 카테고리를 선택하세요 (1 ~ 8) : ");
 	}
-
+	
+	// 사용자로부터 선택값 입력받는 메소드
 	public static void categorySelect() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -43,13 +45,16 @@ public class CategoryUI
 		do
 		{
 			sel = Integer.parseInt(br.readLine());
-
+			
+			// 1 ~ 6 사이를 입력받으면 해당 음료 메뉴판으로 진입
+			// 7을 입력받으면 장바구니 진입
+			// 8을 입력받으면 뒤로가기. 그 외의 번호는 무한루프
 			if (sel >= coffee && sel <= ade)
 				DrinkUI.drinkRun();
 			else if (sel != cart && sel != back)
 				System.out.println("\n다시 입력하세요.\n");
 			else if (sel == cart)
-				Cart.printVC();
+				Cart.printVC(); // 장바구니 표시해주는 Cart클래스의 메소드
 			
 			if (sel == back)
 			{
@@ -66,7 +71,7 @@ public class CategoryUI
 		}
 		while (sel != cart || sel != back);
 	}
-
+	// 카테고리 출력 및 사용자 입력값 받기 메소드 실행
 	public static void categoryRun() throws IOException
 	{
 		categoryDisp();

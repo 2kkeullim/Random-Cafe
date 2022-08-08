@@ -10,6 +10,7 @@ public class InitialUI
 	public static final int adminLogin = 4;
 	public static int sel = 1;
 	
+	// 초기화면 출력 메소드
 	public static void initialDisp()
 	{
 		System.out.println("┌────────────────────────────────────────────────────┐");
@@ -23,6 +24,7 @@ public class InitialUI
 		System.out.print("\n>> 원하시는 서비스를 선택하세요 (1 ~ 4) : ");
 	}
 	
+	// 사용자로부터 이용하고자 하는 메뉴의 번호를 입력받는 메소드
 	public static void initialSelect() throws IOException, NumberFormatException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -42,6 +44,7 @@ public class InitialUI
 		while (true);
 	}
 	
+	// 사용자로부터 입력받는 값에 맞는 메뉴를 실행하는 메서드
 	public static void initialRun() throws IOException
 	{
 		switch (sel)

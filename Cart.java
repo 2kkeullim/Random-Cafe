@@ -21,6 +21,9 @@ public class Cart
 
 		for (int i = 0; i < vc.size(); i++)
 		{
+			// 만약 장바구니의 i번째에 해당하는 메뉴가 쿠폰을 사용했다면
+			// 할인 메소드에 의해 갯수가 하나 줄어들었으므로 출력을 해줄 때는
+			// 갯수에 +1을 해줌.
 			if (vc.get(i).getCouponUse() == true)
 				System.out.printf("%2d번 %6s %6s %8s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
 					, vc.get(i).getPrice() * vc.get(i).getCount(), vc.get(i).getCount() + 1);
@@ -42,16 +45,23 @@ public class Cart
 			case 1 : 
 				if(InitialUI.sel == InitialUI.couponUse && couponUseCount == 0)
 				{
+					// InitailUI.sel이 InitialUI.couponUse란 말은
+					// 초기화면에서 쿠폰사용을 통해 카테고리에 진입했다는 뜻이고
+					// couponUseCount가 0이라는 말은 이번 주문에서 아직 쿠폰을
+					// 사용하지 않았다는 뜻이므로 쿠폰 할인 메서드를 호출
 					CouponUse.bargenByCoupon();
+					// 할인된 가격을 확인하기 위해 다시 한 번 장바구니 호출
 					printVC();
 				}
+				// Pay클래스에서 카드결제, 현금결제 여부 선택
 				Pay.cashOrCard(); 
 				break;
 			case 2 : remove();						// 삭제하면 다시 카테고리로 들어감.
 			case 3 : CategoryUI.categoryRun(); break;
 		}
 	}
-
+	
+	// 완전히 동일한 이름, 옵션을 가진 메뉴는 중첩시켜서 갯수만 증가시키는 메소드
 	public static void overLap(Drink dr)
 	{
 		for(int i = 0; i < vc.size() - 1; i++)
@@ -65,7 +75,8 @@ public class Cart
 			}
 		}	
 	}
-
+	
+	// 장바구니에서 항목을 삭제하는 메소드
 	public static void remove() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -74,7 +85,8 @@ public class Cart
 		totalSum -= vc.get(temp-1).getPrice() * vc.get(temp-1).getCount();
 		vc.remove(temp-1);
 	}
-
+	
+	// 장바구니에 들어있는 가격을 변수 totalSum에 더해주는 메소드
 	public static void total()
 	{
 		int temp = 0;
