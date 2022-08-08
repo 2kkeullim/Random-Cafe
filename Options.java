@@ -18,7 +18,12 @@ public class Options
 			System.out.print(">> Hot 또는 Cold 를 선택하세요. (h(H) or c(C)) 입력 : ");
 			hoc = br.readLine();
 
-			if (hoc.equals("c") || hoc.equals("C"))
+			if (!((hoc.equals("c") || hoc.equals("C") || hoc.equals("h") || hoc.equals("H"))))
+			{
+				System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
+				continue;
+			}
+			else if (hoc.equals("c") || hoc.equals("C"))
 			{	
 				hotOrColdOption = "cold";
 				iceSelect();
@@ -30,8 +35,7 @@ public class Options
 			}
 			cupsCount();
 
-			if (!((hoc.equals("c") || hoc.equals("C") || hoc.equals("h") || hoc.equals("H"))))
-				System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
+			
 		}
 		while (!((hoc.equals("c") || hoc.equals("C") || hoc.equals("h") || hoc.equals("H"))));
 	}

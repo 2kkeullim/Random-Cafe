@@ -55,18 +55,20 @@ public class Sales
 			System.out.println("\n┌────────────────────────────────────────────────────┐");
 			System.out.println("│               [카테고리별  판매비율]               │");
 			System.out.println("└────────────────────────────────────────────────────┘");
-			System.out.printf("%n1. [커피]		%.1f%%", ((double)categoryOrder[0] / totalOrder) * 100);		// 커피 카테고리 주문건수 / 총 주문 건수
-			System.out.printf("%n2. [논커피]	%.1f%%", ((double)categoryOrder[1] / totalOrder) * 100);
-			System.out.printf("%n3. [주스]		%.1f%%", ((double)categoryOrder[2] / totalOrder) * 100);
-			System.out.printf("%n4. [스무디]	%.1f%%", ((double)categoryOrder[3] / totalOrder) * 100);
-			System.out.printf("%n5. [티]		%.1f%%", ((double)categoryOrder[4] / totalOrder) * 100);
-			System.out.printf("%n6. [에이드]	%.1f%%", ((double)categoryOrder[5] / totalOrder) * 100);
-			System.out.println("──────────────────────────────────────────────────────");
-			System.out.printf("%n7. 뒤로 가기%n");
+			System.out.printf("%n1. [커피] %20.1f%%", ((double)categoryOrder[0] / totalOrder) * 100);		// 커피 카테고리 주문건수 / 총 주문 건수
+			System.out.printf("%n2. [논커피] %20.1f%%", ((double)categoryOrder[1] / totalOrder) * 100);
+			System.out.printf("%n3. [주스] %20.1f%%", ((double)categoryOrder[2] / totalOrder) * 100);
+			System.out.printf("%n4. [스무디] %20.1f%%", ((double)categoryOrder[3] / totalOrder) * 100);
+			System.out.printf("%n5. [티] %20.1f%%", ((double)categoryOrder[4] / totalOrder) * 100);
+			System.out.printf("%n6. [에이드] %20.1f%%", ((double)categoryOrder[5] / totalOrder) * 100);
+			System.out.println("\n──────────────────────────────────────────────────────");
+			System.out.printf("7. 뒤로 가기%n");
 			System.out.print(">> 상세 항목 조회 (1 ~ 6) : ");
 
 			AdminUI.sel = Integer.parseInt(br.readLine());
 			System.out.println();
+			if (AdminUI.sel == 7)
+				return;
 			sales();
 		}
 	}

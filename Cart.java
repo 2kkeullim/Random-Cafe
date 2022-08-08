@@ -22,10 +22,10 @@ public class Cart
 		for (int i = 0; i < vc.size(); i++)
 		{
 			if (vc.get(i).getCouponUse() == true)
-				System.out.printf("%2d번 %6s %6s %6s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
+				System.out.printf("%2d번 %6s %6s %8s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
 					, vc.get(i).getPrice() * vc.get(i).getCount(), vc.get(i).getCount() + 1);
 			else
-				System.out.printf("%2d번 %6s %6s %6s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
+				System.out.printf("%2d번 %6s %6s %8s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
 					, vc.get(i).getPrice() * vc.get(i).getCount(), vc.get(i).getCount());
 		}
 
