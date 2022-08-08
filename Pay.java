@@ -16,7 +16,7 @@ public class Pay
 	{
 		do
 		{
-			System.out.print(">> 결제 방식을 선택하여 주십시오. (1: 카드 결제,  2: 현금 결제) : ");
+			System.out.print(">> 결제 방식을 선택하여 주십시오. (1 : 카드 결제,  2 : 현금 결제) : ");
 			selPay = Integer.parseInt(br.readLine());
 
 			if (selPay < card || selPay > cash)
