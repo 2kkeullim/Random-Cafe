@@ -35,7 +35,7 @@ public class PayCash
 
 			ReturnChange.pay = cash;
 			ReturnChange.drink = Cart.totalSum;
-			ReturnChange.change = ReturnChange.pay-ReturnChange.drink;
+			ReturnChange.change = ReturnChange.pay - ReturnChange.drink;
 			ReturnChange.changePrint();				// 잔돈 반환 결과
 		}
 		while (cash % 500 != 0 || cash < Cart.totalSum);
