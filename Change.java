@@ -6,6 +6,7 @@ public class Change
 	
 	static
 	{
+		// Hash맵구조를 이용해 (액수, 갯수)로 잔돈 자료구조 생성
 		change = new HashMap<Integer, Integer>();
 		change.put(500,0);
 		change.put(1000,0);
@@ -13,8 +14,10 @@ public class Change
 		change.put(10000,0);
 	}
 	
+	// 잔돈 총액을 반환해주는 메서드
 	public static int sum()
 	{
+		// 잔돈 총합을 변수 sum에 더해줌
 		int sum = 0;
 		sum += 500 * change.get(500);
 		sum += 1000 * change.get(1000);
