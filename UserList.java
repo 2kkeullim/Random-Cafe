@@ -40,7 +40,7 @@ public class UserList extends User
 			else if (!user.get(i).getPhoneNumber().equals(pn) && i == user.size() - 1) // 신규 회원
 			{
 				user.add(new User(pn));
-				enroll(i);
+				enroll(user.size() - 1);
 				
 				break;
 			}
