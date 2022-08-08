@@ -38,7 +38,7 @@ public class Receipt
 			else if (Pay.selPay == 2)
 				receiptDispForCash();	// 현금결제 시 현금 영수증
 		}
-		// ??
+		// Sales 클래스내 통계 자료에 활용되는 변수 초기화를위한 메소드
 		Sales.addSales();
 	}
 
