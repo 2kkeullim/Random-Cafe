@@ -14,8 +14,7 @@ public class Sales
 	public static int profit;							// 순이익
 	public static int[] categoryOrder = new int[6];		// 카테고리 별 주문건수(개수)를 담을 배열
 	public static int[][] drinkOrder = new int[6][6];	// 메뉴별 주문건수(개수)를 담을배열 [카테고리][메뉴 주문건수]
-	public static final int[] COST = {1000, 2000, 1500, 2500, 1000, 1500};
-	// 카테고리별 원가. 각 카테고리 클래스 안에 있는 원가는 삭제하여도 됨 (이곳에서만 쓰임.)
+	public static final int[] COST = {1000, 2000, 1500, 2500, 1000, 1500};	// 카테고리별 원가
 
 	public static void salesDisp() throws IOException
 	{
