@@ -1,7 +1,5 @@
 public class Stamp extends UserList
 {
-	public int stamp;
-	public int coupon;
 	public int userStamp;
 	public int userCoupon;
 	public static int drinkCountForStamp;
@@ -9,8 +7,6 @@ public class Stamp extends UserList
 	public void stampCal()
 	{
 		drinkCountForStamp = 0;
-		stamp = 0;
-		coupon = 0;
 
 		if (Cart.couponUseCount != 0)
 		{
@@ -30,20 +26,12 @@ public class Stamp extends UserList
 			}
 		}
 		
-		stamp += drinkCountForStamp;							// 스탬프 갯수
+		userStamp += drinkCountForStamp;							// 스탬프 갯수
 		
-		if (stamp >= 10)
-		{
-			userCoupon += (stamp / 10);
-			userStamp += stamp % 10;
-		}
-		else
-			userStamp += stamp;
-
 		if (userStamp >= 10)
 		{
-			userCoupon++;
-			userStamp += stamp % 10;
+			userCoupon += userStamp / 10;
+			userStamp = userStamp % 10;
 		}
 	}
 
