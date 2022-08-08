@@ -8,7 +8,9 @@ public class User
 	User()
 	{
 	}
-
+	
+	// 유저 정보 생성자
+	// 신규회원들을 받을 때 매개변수 있는 생성자 활용
 	User(String phoneNumber)
 	{
 		this.phoneNumber = phoneNumber;
