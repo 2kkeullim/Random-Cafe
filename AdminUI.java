@@ -47,8 +47,8 @@ public class AdminUI
 	{
 		switch (sel)
 		{
-			case salesManage:	Sales.salesManage(); break;
-			case salesRatio:	Sales.eachDrinkSales(); break;
+			case salesManage:	Sales.salesDisp(); break;
+			case salesRatio:	Sales.drinkDisp(); break;
 			case checkChange:	ChangeUI.checkChange(); break;
 			case addChange:		ChangeUI.addChange(); break;
 			case cafeClose:		Cat.close(); break;
