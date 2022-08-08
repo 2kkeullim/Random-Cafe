@@ -68,7 +68,7 @@ public class Pay
 		
 		switch (selStamp)
 		{
-			case yes: UserList.userLogin(); UserList.saveStampCash();
+			case yes: UserList.userLogin(); Stamp.printStampResult();
 			case no: Receipt.receiptDispRun(); break;
 		}
 
