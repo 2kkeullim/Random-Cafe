@@ -30,8 +30,8 @@ public class Cart
 		}
 
 		System.out.println("──────────────────────────────────────────────────────");
-		System.out.println("                                총 금액 : " + totalSum + "원");
-		System.out.println("1. 결제하기    2.항목 삭제하기    3. 뒤로가기\n");
+		System.out.println("                                  총 금액 : " + totalSum + "원");
+		System.out.println("1. 결제하기       2.항목 삭제하기       3. 뒤로 가기\n");
 
 		System.out.print(">> 원하는 항목 : ");
 		sel = Integer.parseInt(br.readLine());
@@ -61,7 +61,7 @@ public class Cart
 				int x = vc.get(i).getCount();		// 이름, 옵션이 같은경우 -> 갯수를 
 				x += dr.getCount();					// 상위 주문내역에 추가함
 				vc.get(i).setCount(x);           
-				vc.remove(vc.size()-1);				// 그리고 마지막 주문내역(중복된 메뉴)을 벡터에서 지움 ,
+				vc.remove(vc.size()-1);				// 그리고 마지막 주문내역(중복된 메뉴)을 벡터에서 지움
 			}
 		}	
 	}
