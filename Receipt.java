@@ -41,7 +41,7 @@ public class Receipt
 			System.out.printf("  주문번호 : 0%d\n", ++receiptNumber);
 		else
 			System.out.printf("  주문번호 : %d\n", ++receiptNumber);
-		AddSales.addSales();
+		Sales.addSales();
 	}
 
 	public static void detectRandom()
