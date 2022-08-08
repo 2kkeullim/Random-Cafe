@@ -28,9 +28,9 @@ public class Receipt
 		
 		if (temp.equals("Y") || temp.equals("y"))
 		{
-			if (Pay.sel == 1)
+			if (Pay.selPay == 1)
 				receiptDispForCard();	// 카드결제 시 카드 영수증
-			else if (Pay.sel == 2)
+			else if (Pay.selPay == 2)
 				receiptDispForCash();	// 현금결제 시 현금 영수증
 		}
 		if(receiptNumber < 10)
