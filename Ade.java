@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class Ade extends Options
@@ -9,7 +7,7 @@ public class Ade extends Options
 	
 	public void set(String drinkName, int drinkPrice) throws IOException
 	{
-		System.out.println("\n" + Ade.drinkName[DrinkUI.sel-1] + " 을(를) 선택하셨습니다.\n");
+		System.out.println("\n" + Ade.drinkName[DrinkUI.sel - 1] + " 을(를) 선택하셨습니다.\n");
 		option2();
 
 		Drink dr = new Drink("cold", iceOption, drinkCountOption);
