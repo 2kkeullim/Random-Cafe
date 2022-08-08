@@ -5,14 +5,14 @@ import java.io.IOException;
 
 public class Cart
 {
-	public static Vector<Drink> vc = new Vector<Drink>();
+	public static Vector<Drink> vc = new Vector<Drink>();    // 생성된(주문받은) Drink 인스턴스가 장바구니내 벡터 자료구조에 담김
 	public static int sel; 
-	public static int totalSum = 0; // 총 금액 변수
-	public static int couponUseCount = 0;
+	public static int totalSum = 0;							 // 총 금액 변수
+	public static int couponUseCount = 0;					 
 
 	public static void printVC() throws IOException
 	{
-		total();  // 주문한 내역의 총합의 금액이 totalSum에 저장됨.
+		total();										     // 주문한 내역의 총합의 금액이 totalSum에 저장됨.
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -21,10 +21,10 @@ public class Cart
 
 		for (int i = 0; i < vc.size(); i++)
 		{
-			if (vc.get(i).getCouponUse() == true)
+			if (vc.get(i).getCouponUse() == true)    //쿠폰을 사용할 경우
 				System.out.printf("%2d번 %6s %6s %6s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
 					, vc.get(i).getPrice() * vc.get(i).getCount(), vc.get(i).getCount() + 1);
-			else
+			else					
 				System.out.printf("%2d번 %6s %6s %6s %8d원 %2d개\n", i+1, vc.get(i).getName(), vc.get(i).getHoc(), vc.get(i).getIce()
 					, vc.get(i).getPrice() * vc.get(i).getCount(), vc.get(i).getCount());
 		}
@@ -66,20 +66,20 @@ public class Cart
 		}	
 	}
 
-	public static void remove() throws IOException
+	public static void remove() throws IOException     //주문내역의 원하는 번호를 삭제할 수 있다.
 	{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print(">> 삭제할 항목의 번호를 입력하세요 : ");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
+		System.out.print(">> 삭제할 항목의 번호를 입력하세요 : ");				
 		int temp = Integer.parseInt(br.readLine());
-		totalSum -= vc.get(temp-1).getPrice() * vc.get(temp-1).getCount();
-		vc.remove(temp-1);
+		totalSum -= vc.get(temp-1).getPrice() * vc.get(temp-1).getCount();		// 장바구니 총액에서 삭제하고 싶은 항목의 가격을 뺌.	
+		vc.remove(temp-1);		
 	}
 
-	public static void total()
+	public static void total()    //현재까지 주문한 총액을 계산하는 메소드
 	{
 		int temp = 0;
 		for (int i = 0; i < vc.size(); i++)
-			temp += vc.get(i).getPrice() * vc.get(i).getCount();
+			temp += vc.get(i).getPrice() * vc.get(i).getCount();    
 		totalSum = temp;                     
 	}
 }
