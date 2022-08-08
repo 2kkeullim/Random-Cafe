@@ -21,6 +21,8 @@ public class CategoryUI
 			System.out.println("│                       [매장]                       │");
 		else if (InitialUI.sel == InitialUI.takeOut)
 			System.out.println("│                       [포장]                       │");
+		else if (InitialUI.sel == InitialUI.couponUse)
+			System.out.println("│                    [쿠폰  사용]                    │");
 		System.out.println("│                                                    │");		
 		System.out.println("│                      1. coffee                     │");
 		System.out.println("│                      2. non-coffee                 │");
