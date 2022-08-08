@@ -5,7 +5,6 @@ import java.io.IOException;
 public class UserList extends User
 {
 	static Vector<User> user = new Vector<User>(); // 개인 정보를 담는 그릇
-	static Stamp sp = new Stamp();
 	public static boolean flag;
 	public static String pn;
 	public static int couponForLogIn; 
@@ -58,15 +57,5 @@ public class UserList extends User
 
 		user.get(i).setStamp(sp.userStamp);
 		user.get(i).setCoupon(sp.userCoupon);
-	}
-
-	public static void saveStampCard()
-	{
-		sp.printStampResult();
-	}
-
-	public static void saveStampCash()
-	{
-		sp.printStampResult();
 	}
 }
