@@ -17,7 +17,7 @@ public class Stamp extends UserList
 
 		for (int i = 0; i < Cart.vc.size(); i++)
 		{
-			drinkCountForStamp += Cart.vc.get(i).getCount();	// 구매자가 구매한 음료 갯수
+			drinkCountForStamp += Cart.vc.get(i).getCount();		// 구매자가 구매한 음료 갯수
 
 			if (Cart.vc.get(i).getCouponUse() == true)
 			{
@@ -35,7 +35,7 @@ public class Stamp extends UserList
 		}
 	}
 
-	public void printStampResult()
+	public static void printStampResult()
 	{
 		System.out.println("\n┌────────────────────────────────────────────────────┐");
 		System.out.println("│            스탬프 적립이 완료되었습니다.           │");
