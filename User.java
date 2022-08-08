@@ -5,7 +5,7 @@ public class User
 	private int coupon = 0;
 	private int userNumber;
 
-	User()		// default 생성자
+	User()
 	{
 	}
 
