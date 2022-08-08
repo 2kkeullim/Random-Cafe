@@ -35,7 +35,7 @@ public class Stamp extends UserList
 		if (stamp >= 10)
 		{
 			userCoupon += (stamp / 10);
-			userStamp = stamp % 10;
+			userStamp += stamp % 10;
 		}
 		else
 			userStamp += stamp;
