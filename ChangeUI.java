@@ -33,7 +33,9 @@ public class ChangeUI
 		do
 		{
 			System.out.print("\n>> 금액 단위와 개수를 입력해 주세요.(공백 구분) : ");
-
+			
+			// 추가 희망하는 액수는 변수 unit 
+			// 갯수는 변수 count에 대입
 			int unit = sc.nextInt();
 			int count = sc.nextInt();
 
@@ -44,7 +46,9 @@ public class ChangeUI
 			else
 			{
 				System.out.printf("\n==> %d원을 %d개 추가 하였습니다.\n\n",unit, count);
+				// 추가 희망한 갯수에 기존의 잔돈 보유 갯수를 더해주고
 				count += Change.change.get(unit);
+				// 해당하는 액수의 해쉬맵 밸류에 count값 대입 (기존 보유랑 + 새로운 추가량)
 				Change.change.put(unit, count);
 			}
 			System.out.print(">> 잔돈 추가 : Y or y, 뒤로 가기 : Ctrl+z : ");
