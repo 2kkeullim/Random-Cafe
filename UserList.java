@@ -58,12 +58,6 @@ public class UserList extends User
 
 		user.get(i).setStamp(sp.userStamp);
 		user.get(i).setCoupon(sp.userCoupon);
-			
-		if (user.get(i).getStamp() >= 10)
-		{
-			user.get(i).setStamp(user.get(i).getStamp() % 10);
-			user.get(i).setCoupon(user.get(i).getCoupon() + 1);
-		}
 	}
 
 	public static void saveStampCard()
