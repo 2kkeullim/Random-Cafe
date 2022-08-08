@@ -9,7 +9,6 @@ import java.time.LocalTime;
 public class Receipt
 {
 	static Calendar cal = Calendar.getInstance();
-
 	static LocalDate nd = LocalDate.now();
 	static LocalTime nt = LocalTime.now();
 
@@ -37,25 +36,9 @@ public class Receipt
 		Sales.addSales();
 	}
 
-	public static void detectRandom()
-	{
-		for (int i = 0; i < Cart.vc.size(); i++)
-		{	
-			switch (Cart.vc.get(i).getName())
-			{
-				case "랜덤커피"   : Cart.vc.get(i).setName("(R)" + Coffee.drinkName[RandomDrink.roll()]);		break;
-				case "랜덤라떼"   : Cart.vc.get(i).setName("(R)" + NonCoffee.drinkName[RandomDrink.roll()]);	break;
-				case "랜덤주스"   : Cart.vc.get(i).setName("(R)" + Juice.drinkName[RandomDrink.roll()]);		break;
-				case "랜덤스무디" : Cart.vc.get(i).setName("(R)" + Smoothie.drinkName[RandomDrink.roll()]);	break;
-				case "랜덤티"     : Cart.vc.get(i).setName("(R)" + Tea.drinkName[RandomDrink.roll()]);		break;
-				case "랜덤에이드" : Cart.vc.get(i).setName("(R)" + Ade.drinkName[RandomDrink.roll()]);		break;
-			}
-		}
-	}
-
 	public static void receiptDispForCard()
 	{
-		detectRandom();
+		RandomDrink.detectRandom();
 		System.out.println("\n──────────────────────────────────────────────────────");
 		System.out.println("                    [영   수   증]                   \n");
 		System.out.printf("%s %02d:%02d:%02d %s         [ 주문번호 : %04d ]\n\n", nd, hour, minute, second, week[cal.get(Calendar.DAY_OF_WEEK)-1], ++receiptNumber);
