@@ -14,7 +14,7 @@ public class UserList extends User
 	public static void userLogin() throws IOException
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.print("번호를 입력하세요 : " );
+		System.out.print(">> 번호를 입력하세요 : " );
 		pn = sc.next(); 
 
 			for (int i = 0; i < user.size(); i++)
